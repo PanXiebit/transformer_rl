@@ -43,7 +43,11 @@ params.target_vocab_size = len(lines)
 #         latest_checkpoint = int(tf.train.latest_checkpoint(flags_obj.model_dir).split("-")[-1])
 #         flags_obj.train_steps = flags_obj.train_steps - latest_checkpoint
 #     train_eval_iterations = (flags_obj.train_steps // flags_obj.steps_between_evals)
+<<<<<<< Updated upstream
 #
+=======
+# 
+>>>>>>> Stashed changes
 #     single_iteration_train_steps = flags_obj.steps_between_evals
 #     single_iteration_train_epochs = None
 
@@ -255,7 +259,7 @@ def train(params):
             sess.run(train_iterator.initializer)
 
             ckpt = tf.train.latest_checkpoint(flags_obj.model_dir)
-            print(ckpt)
+            print("ckpt", ckpt)
             if ckpt and tf.train.checkpoint_exists(ckpt):
                 print("Reloading model parameters..from {}".format(ckpt))
                 saver.restore(sess, ckpt)
@@ -325,4 +329,6 @@ def main(argv=None):  # pylint: disable=unused-argument
 
 if __name__ == '__main__':
     tf.app.run()
+
+
 
