@@ -26,11 +26,11 @@ class Transformer(object):
         else:
             self.mode = ModeKeys.PREDICT
         
-        #with tf.device('/cpu:0'):
-        #    self.dropout_pl = tf.placeholder(dtype=tf.float32, shape=[], name="dropout_pl")
-        #    self.params.layer_postprocess_dropout = self.dropout_pl
-        #    self.params.attention_dropout = self.dropout_pl
-        #    self.relu_dropout = self.dropout_pl
+        with tf.device('/cpu:0'):
+           self.dropout_pl = tf.placeholder(dtype=tf.float32, shape=[], name="dropout_pl")
+           self.params.layer_postprocess_dropout = self.dropout_pl
+           self.params.attention_dropout = self.dropout_pl
+           self.relu_dropout = self.dropout_pl
 
         if params.shared_embedding_softmax_weights:
             print("sharing embedding!!!")

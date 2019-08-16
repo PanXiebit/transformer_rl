@@ -5,7 +5,7 @@ import os
 from utils import dataset, metrics
 from six.moves import xrange  # pylint: disable=redefined-builtin
 from model import transformer_5
-import re, time
+import re, time, math
 import numpy as np
 from datetime import datetime
 
@@ -112,7 +112,7 @@ def average_gradients(tower_grads):
     return average_grads
 
 
-def tower_loss(scope, src, tgt, model):
+def tower_loss(scope, input_fn):
     """ calculate the total loss on a single tower runing the train model.
 
     :param scope:
@@ -121,12 +121,13 @@ def tower_loss(scope, src, tgt, model):
     :return:
     """
     # Build inference Graph.
-    #model = transformer_5.Transformer(params, is_train=True)
-    logits = model.build_pretrain(src, tgt)
+    model = transformer_5.Transformer(params, is_train=True)
+    # src, tgt = input_fn
+    logits = model.build_pretrain(input_fn.source, input_fn.target)
 
     # Build the portion of the Graph calculating the losses. Note that we will
     # assemble the total_loss using a custom function below.
-    _ = get_loss(logits, tgt)
+    _ = get_loss(logits, input_fn.target)
 
     # Assemble all of the losses for the current tower only.
     losses = tf.get_collection('losses', scope)
@@ -166,18 +167,21 @@ def train(params):
 
         # get src,tgt sentence for each model tower
         my_dataset = dataset.MyDataset(params)
-        src, tgt = my_dataset.train_input_fn(params)
-        batch_queue = tf.contrib.slim.prefetch_queue.prefetch_queue(
-            [src, tgt], capacity=2 * flags_obj.num_gpus
-        )
+        # src, tgt = my_dataset.train_input_fn(params)
+        # batch_queue = tf.contrib.slim.prefetch_queue.prefetch_queue(
+        #     [src, tgt], capacity=2 * flags_obj.num_gpus
+        # )
+        train_iterator = my_dataset.train_input_fn(params)
+        valid_iterator = my_dataset.eval_input_fn(params)
+
         tower_grads = []
         with tf.variable_scope(tf.get_variable_scope()):
             for i in xrange(flags_obj.num_gpus):
                 with tf.device('/gpu:%d' % i):
                     with tf.name_scope('%s_%d' % (TOWER_NAME, i)) as scope:
-                        src, tgt = batch_queue.dequeue()
-                        model = transformer_5.Transformer(params, is_train=True)
-                        loss = tower_loss(scope, src, tgt, model)
+                        # src, tgt = batch_queue.dequeue()
+                        # model = transformer_5.Transformer(params, is_train=True)
+                        loss = tower_loss(scope, train_iterator)
 
                         # Reuse variables for the next tower.
                         tf.get_variable_scope().reuse_variables()
@@ -190,6 +194,11 @@ def train(params):
                         #    print(var)
                         print("total trainable variables number", len(grads)) 
                         tower_grads.append(grads)
+
+                if i == 0 and valid_iterator:
+                    with tf.name_scope('%s_%d' % (TOWER_NAME, i)) as scope:
+                        valid_loss_op = tower_loss(scope, valid_iterator)
+
         # We must calculate the mean of each gradient. Note that this is the
         # synchronization point across all towers.
         grads = average_gradients(tower_grads)
@@ -237,48 +246,71 @@ def train(params):
         
         sess_config = tf.ConfigProto()
         sess_config.gpu_options.allow_growth = True
-        sess_config.allow_soft_placement = True 
-        sess = tf.Session(config=sess_config)
-        sess.run(init)
-        
-        ckpt = tf.train.latest_checkpoint(flags_obj.model_dir)
-        if ckpt and tf.train.checkpoint_exists(ckpt):
-            print("Reloading model parameters..from {}".format(ckpt))
-            saver.restore(session, ckpt)
-        else:
-            print("create a new model...{}".format(flags_obj.model_dir))
-                        
-        # Start the queue runners.
-        tf.train.start_queue_runners(sess=sess)
+        sess_config.allow_soft_placement = True
 
-        summary_writer = tf.summary.FileWriter(flags_obj.model_dir, sess.graph)
+        with tf.Session(config=sess_config) as sess:
+            sess.run(init)
+            sess.run(tf.local_variables_initializer())
 
-        for step in xrange(flags_obj.train_steps):
-            start_time = time.time()
-            #_, loss_value = sess.run([train_op, loss], feed_dict={model.dropout_pl:0.1})
-            _, loss_value = sess.run([train_op, loss]) 
-            duration = time.time() - start_time
+            sess.run(train_iterator.initializer)
 
-            assert not np.isnan(loss_value), 'Model diverged with loss = NaN'
+            ckpt = tf.train.latest_checkpoint(flags_obj.model_dir)
+            if ckpt and tf.train.checkpoint_exists(ckpt):
+                print("Reloading model parameters..from {}".format(ckpt))
+                saver.restore(sess, ckpt)
+            else:
+                print("create a new model...{}".format(flags_obj.model_dir))
 
-            if step % 100 == 0:
-                num_examples_per_step = flags_obj.batch_size * flags_obj.num_gpus
-                examples_per_sec = num_examples_per_step / duration
-                sec_per_batch = duration / flags_obj.num_gpus
+            # Start the queue runners.
+            tf.train.start_queue_runners(sess=sess)
 
-                format_str = ('%s: step %d, loss = %.2f (%.1f examples/sec; %.3f '
-                              'sec/batch)')
-                print(format_str % (datetime.now(), step, loss_value,
-                                    examples_per_sec, sec_per_batch))
+            summary_writer = tf.summary.FileWriter(flags_obj.model_dir, sess.graph)
 
-            if step % 100 == 0:
-                summary_str = sess.run(summary_op)
-                summary_writer.add_summary(summary_str, step)
+            for step in xrange(flags_obj.train_steps):
+                start_time = time.time()
+                # _, loss_value = sess.run([train_op, loss], feed_dict={model.dropout_pl:0.1})
+                _, loss_value = sess.run([train_op, loss])
+                duration = time.time() - start_time
 
-            # Save the model checkpoint periodically.
-            if step % 1000 == 0 or (step + 1) == flags_obj.train_steps:
-                checkpoint_path = os.path.join(flags_obj.model_dir, 'model.ckpt')
-                saver.save(sess, checkpoint_path, global_step=step)
+                assert not np.isnan(loss_value), 'Model diverged with loss = NaN'
+
+                if step % 100 == 0:
+                    num_examples_per_step = flags_obj.batch_size * flags_obj.num_gpus
+                    examples_per_sec = num_examples_per_step / duration
+                    sec_per_batch = duration / flags_obj.num_gpus
+
+                    format_str = ('%s: step %d, loss = %.2f (%.1f examples/sec; %.3f '
+                                  'sec/batch)')
+                    print(format_str % (datetime.now(), step, loss_value,
+                                        examples_per_sec, sec_per_batch))
+
+                if step % 100 == 0:
+                    summary_str = sess.run(summary_op)
+                    summary_writer.add_summary(summary_str, step)
+
+                if step % flags_obj.steps_between_evals:
+                    sess.run(valid_iterator.initializer)
+                    print("Validation step ...")
+                    valid_loss = 0.0
+                    total_size = 0
+                    while True:
+                        try:
+                            step_loss = sess.run(valid_loss_op)
+                        except tf.errors.OutOfRangeError:
+                            print("Finished going through the valid dataset")
+                            sess.run(valid_iterator.initializer)
+                            continue
+                        batch_size = flags_obj.batch_size
+                        valid_loss += step_loss * batch_size
+                        total_size += batch_size
+                    valid_loss = valid_loss / total_size
+                    print("Valid loss : {:.2f}".format(valid_loss))
+                    print("Valid perplexity: {:.2f}".format(math.exp(valid_loss)))
+
+                # Save the model checkpoint periodically.
+                if step % 1000 == 0 or (step + 1) == flags_obj.train_steps:
+                    checkpoint_path = os.path.join(flags_obj.model_dir, 'model.ckpt')
+                    saver.save(sess, checkpoint_path, global_step=step)
 
 
 def main(argv=None):  # pylint: disable=unused-argument

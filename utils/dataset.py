@@ -8,6 +8,8 @@ import os
 
 import tensorflow as tf
 from utils.tokenizer import PAD_ID
+import collections
+
 
 _FILE_SHUFFLE_BUFFER = 100  # 用来shuffle的文件数量
 _READ_RECORD_BUFFER = 8 * 1000 * 1000
@@ -201,6 +203,12 @@ class Dataset(object):
         src, tgt = iterator.get_next()
         return src, tgt 
 
+
+class BatchedInput(
+    collections.namedtuple("BatchedInput",
+                           ("initializer", "source", "target"))):
+    pass
+
 class MyDataset(object):
     def __init__(self, params):
         self.params = params
@@ -270,9 +278,12 @@ class MyDataset(object):
                                                      repeat=params.repeat_dataset,
                                                      is_reversed=is_reversed)
         #return dataset
-        iterator = dataset.make_one_shot_iterator()
+        # iterator = dataset.make_one_shot_iterator()
+        iterator = dataset.make_initializable_iterator()
         src, tgt = iterator.get_next()
-        return src, tgt 
+        return BatchedInput(initializer=iterator.initializer,
+                            source=src,
+                            target=tgt)
 
     def eval_input_fn(self, params):
         """Load and return dataset of batched examples for use during evaluation."""
@@ -284,9 +295,12 @@ class MyDataset(object):
             params.num_parallel_calls, shuffle=False, repeat=1, is_reversed=is_reversed)
         
         #return dataset
-        iterator = dataset.make_one_shot_iterator()
+        # iterator = dataset.make_one_shot_iterator()
+        iterator = dataset.make_initializable_iterator()
         src, tgt = iterator.get_next()
-        return src, tgt 
+        return BatchedInput(initializer=iterator.initializer,
+                            source=src,
+                            target=tgt)
 
 if __name__ == "__main__":
     class Params(object):
