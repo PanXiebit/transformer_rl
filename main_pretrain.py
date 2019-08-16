@@ -38,14 +38,14 @@ fp = open(os.path.join(flags_obj.data_dir, 'vocab.bpe.' + str(flags_obj.vocabula
 lines = fp.readlines()
 params.target_vocab_size = len(lines)
 
-if flags_obj.train_steps is not None:
-    if tf.train.latest_checkpoint(flags_obj.model_dir):
-        latest_checkpoint = int(tf.train.latest_checkpoint(flags_obj.model_dir).split("-")[-1])
-        flags_obj.train_steps = flags_obj.train_steps - latest_checkpoint
-    train_eval_iterations = (flags_obj.train_steps // flags_obj.steps_between_evals)
-
-    single_iteration_train_steps = flags_obj.steps_between_evals
-    single_iteration_train_epochs = None
+# if flags_obj.train_steps is not None:
+#     if tf.train.latest_checkpoint(flags_obj.model_dir):
+#         latest_checkpoint = int(tf.train.latest_checkpoint(flags_obj.model_dir).split("-")[-1])
+#         flags_obj.train_steps = flags_obj.train_steps - latest_checkpoint
+#     train_eval_iterations = (flags_obj.train_steps // flags_obj.steps_between_evals)
+#
+#     single_iteration_train_steps = flags_obj.steps_between_evals
+#     single_iteration_train_epochs = None
 
 if params.shared_embedding_softmax_weights:
     assert params.target_vocab_size == params.source_vocab_size
@@ -142,8 +142,12 @@ def tower_loss(scope, input_fn):
         # session. This helps the clarity of presentation on tensorboard.
         loss_name = re.sub('%s_[0-9]*/' % TOWER_NAME, '', l.op.name)
         tf.summary.scalar(loss_name, l)
-
     return total_loss
+
+def predict(eval_fn):
+    model = transformer_5.Transformer(params, is_train=True)
+    predictions = model.build_pretrain(eval_fn.source, targets=None)
+    return predictions, eval_fn.target
 
 
 def train(params):
@@ -166,7 +170,7 @@ def train(params):
             epsilon=params.optimizer_adam_epsilon)
 
         # get src,tgt sentence for each model tower
-        my_dataset = dataset.MyDataset(params)
+        my_dataset = dataset.Dataset(params)
         # src, tgt = my_dataset.train_input_fn(params)
         # batch_queue = tf.contrib.slim.prefetch_queue.prefetch_queue(
         #     [src, tgt], capacity=2 * flags_obj.num_gpus
@@ -176,13 +180,13 @@ def train(params):
 
         tower_grads = []
         with tf.variable_scope(tf.get_variable_scope()):
+            print(tf.get_variable_scope())
             for i in xrange(flags_obj.num_gpus):
                 with tf.device('/gpu:%d' % i):
                     with tf.name_scope('%s_%d' % (TOWER_NAME, i)) as scope:
                         # src, tgt = batch_queue.dequeue()
                         # model = transformer_5.Transformer(params, is_train=True)
                         loss = tower_loss(scope, train_iterator)
-
                         # Reuse variables for the next tower.
                         tf.get_variable_scope().reuse_variables()
                         # Retain the summaries from the final tower.
@@ -197,7 +201,8 @@ def train(params):
 
                 if i == 0 and valid_iterator:
                     with tf.name_scope('%s_%d' % (TOWER_NAME, i)) as scope:
-                        valid_loss_op = tower_loss(scope, valid_iterator)
+                        # valid_loss_op = tower_loss(scope, valid_iterator)
+                        val_pred, val_target = predict(valid_iterator)
 
         # We must calculate the mean of each gradient. Note that this is the
         # synchronization point across all towers.
@@ -239,11 +244,6 @@ def train(params):
         # Start running operations on the Graph. allow_soft_placement must be set to
         # True to build towers on GPU, as some of the ops do not have GPU
         # implementations.
-        #sess = tf.Session(config=tf.ConfigProto(
-        #    allow_soft_placement=True,
-        #    log_device_placement=False,
-        #    gpu_options.allow_growth))
-        
         sess_config = tf.ConfigProto()
         sess_config.gpu_options.allow_growth = True
         sess_config.allow_soft_placement = True
@@ -255,6 +255,7 @@ def train(params):
             sess.run(train_iterator.initializer)
 
             ckpt = tf.train.latest_checkpoint(flags_obj.model_dir)
+            print(ckpt)
             if ckpt and tf.train.checkpoint_exists(ckpt):
                 print("Reloading model parameters..from {}".format(ckpt))
                 saver.restore(sess, ckpt)
@@ -263,7 +264,6 @@ def train(params):
 
             # Start the queue runners.
             tf.train.start_queue_runners(sess=sess)
-
             summary_writer = tf.summary.FileWriter(flags_obj.model_dir, sess.graph)
 
             for step in xrange(flags_obj.train_steps):
@@ -288,29 +288,32 @@ def train(params):
                     summary_str = sess.run(summary_op)
                     summary_writer.add_summary(summary_str, step)
 
-                if step % flags_obj.steps_between_evals:
+                if step % flags_obj.steps_between_evals == 0:
                     sess.run(valid_iterator.initializer)
                     print("Validation step ...")
-                    valid_loss = 0.0
+                    valid_bleu = 0.0
                     total_size = 0
                     while True:
                         try:
-                            step_loss = sess.run(valid_loss_op)
+                            step_pred, step_tgt = sess.run([val_pred, val_target])
+                            print(step_pred.shape, step_tgt.shape)
+                            step_bleu = metrics.compute_bleu(step_pred, step_tgt)
                         except tf.errors.OutOfRangeError:
                             print("Finished going through the valid dataset")
-                            sess.run(valid_iterator.initializer)
-                            continue
+                            # sess.run(valid_iterator.initializer)
+                            # continue
+                            break
                         batch_size = flags_obj.batch_size
-                        valid_loss += step_loss * batch_size
+                        valid_bleu += step_bleu * batch_size
                         total_size += batch_size
-                    valid_loss = valid_loss / total_size
-                    print("Valid loss : {:.2f}".format(valid_loss))
-                    print("Valid perplexity: {:.2f}".format(math.exp(valid_loss)))
+                    valid_bleu = valid_bleu / total_size
+                    print("{0}, Valid bleu : {1:.2f}".format(datetime.now(), valid_bleu))
 
                 # Save the model checkpoint periodically.
                 if step % 1000 == 0 or (step + 1) == flags_obj.train_steps:
                     checkpoint_path = os.path.join(flags_obj.model_dir, 'model.ckpt')
                     saver.save(sess, checkpoint_path, global_step=step)
+                    print("Saving model at {}".format(checkpoint_path + "step"))
 
 
 def main(argv=None):  # pylint: disable=unused-argument

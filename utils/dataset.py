@@ -171,9 +171,14 @@ class Dataset(object):
                                                      shuffle=True,
                                                      repeat=params.repeat_dataset,
                                                      is_reversed=is_reversed)
-        iterator = dataset.make_one_shot_iterator()
+        # iterator = dataset.make_one_shot_iterator()
+        # src, tgt = iterator.get_next()
+        # return src, tgt
+        iterator = dataset.make_initializable_iterator()
         src, tgt = iterator.get_next()
-        return src, tgt 
+        return BatchedInput(initializer=iterator.initializer,
+                            source=src,
+                            target=tgt)
 
     def train_input_fn_mono(self, params):
         # 文件名模板
@@ -186,9 +191,14 @@ class Dataset(object):
                                                      repeat=params.repeat_dataset,
                                                      is_reversed=is_reversed)
         #return dataset
-        iterator = dataset.make_one_shot_iterator()
+        # iterator = dataset.make_one_shot_iterator()
+        # src, tgt = iterator.get_next()
+        # return src, tgt
+        iterator = dataset.make_initializable_iterator()
         src, tgt = iterator.get_next()
-        return src, tgt 
+        return BatchedInput(initializer=iterator.initializer,
+                            source=src,
+                            target=tgt)
 
     def eval_input_fn(self, params):
         """Load and return dataset of batched examples for use during evaluation."""
@@ -199,9 +209,14 @@ class Dataset(object):
             file_pattern, params.batch_size, params.max_length,
             params.num_parallel_calls, shuffle=False, repeat=1, is_reversed=is_reversed)
         #return dataset
-        iterator = dataset.make_one_shot_iterator()
+        # iterator = dataset.make_one_shot_iterator()
+        # src, tgt = iterator.get_next()
+        # return src, tgt
+        iterator = dataset.make_initializable_iterator()
         src, tgt = iterator.get_next()
-        return src, tgt 
+        return BatchedInput(initializer=iterator.initializer,
+                            source=src,
+                            target=tgt)
 
 
 class BatchedInput(
