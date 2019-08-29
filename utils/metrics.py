@@ -20,7 +20,7 @@ import numpy as np
 import six
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow as tf
-
+from utils.tokenizer import EOS_ID, PAD_ID
 
 def _convert_to_eval_metric(metric_fn):
     """Wrap a metric fn that returns scores and weights as an eval metric fn.
@@ -223,6 +223,11 @@ def compute_bleu(reference_corpus, translation_corpus, max_order=4,
     precisions = []
 
     for (references, translations) in zip(reference_corpus, translation_corpus):
+        #index_t = np.sum(np.not_equal(translations, EOS_ID))
+        #translations = translations[:index_t]
+        #index_r = np.sum(np.not_equal(translations, PAD_ID))
+        #references = references[:index_r-1]
+
         reference_length += len(references)
         translation_length += len(translations)
         ref_ngram_counts = _get_ngrams_with_counter(references, max_order)

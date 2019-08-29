@@ -69,14 +69,17 @@ class Transformer(object):
     def build_pretrain_mono(self, inputs, targets):
         #inputs_length = tf.reduce_sum(tf.cast(tf.not_equal(inputs, EOS_ID), tf.int32), axis=1) # [batch]
         inputs_length = tf.argmin(inputs, axis=-1) + 1
+        print("inputs_length", inputs_length)
         max_len = inputs_length[tf.argmax(inputs_length)]
         batch_size = tf.shape(inputs)[0]
 
         pad_inputs = tf.zeros([0, max_len], dtype=tf.int32)
         def inner_loop(i, pad_inputs):
             ori_length = inputs_length[i]
+            print(ori_length)
             ori_input = tf.reshape(inputs[i][:ori_length], [1, -1])
             pad_input = tf.pad(ori_input, [[0,0], [0, max_len - ori_length]])
+            print("pad_input", pad_input)
             pad_inputs = tf.concat([pad_inputs, pad_input], axis=0)   
             return i + 1, pad_inputs
         _, pad_inputs = tf.while_loop(
@@ -136,79 +139,49 @@ class Transformer(object):
             )
             return roll_sample
 
-    #def get_reward(self, origin_inputs, gen_targets, roll_num):
-    #    max_len = tf.shape(gen_targets)[1]
-    #    batch_size = tf.shape(gen_targets)[0]
-    #    gen_targets_mask = tf.cast(tf.not_equal(gen_targets, PAD_ID), tf.float32)
-    #    total_rewards = []
-    #    for i in range(roll_num):
-    #        tf.logging.info("roll_num: {}".format(i))
-    #        start_time = time.time()
+    def get_reward(self, origin_inputs, gen_targets, roll_num):
+        max_len = tf.shape(gen_targets)[1]
+        batch_size = tf.shape(gen_targets)[0]
+        gen_targets_mask = tf.cast(tf.not_equal(gen_targets, PAD_ID), tf.float32)
+        total_rewards = []
+        for i in range(roll_num):
+            tf.logging.info("roll_num: {}".format(i))
+            start_time = time.time()
 
-    #        given_num = tf.constant(1)
-    #        rewards = tf.zeros((batch_size, 0), dtype=tf.float32)
+            given_num = tf.constant(1)
+            rewards = tf.zeros((batch_size, 0), dtype=tf.float32)
 
-    #        def inner_loop(given_num, rewards):
-    #            tf.logging.info("given_num {}".format(given_num))
-    #            roll_sample = self.build_padding_rollout_generator(
-    #                gen_samples=gen_targets,
-    #                max_len=max_len,
-    #                given_num=given_num
-    #            )
-    #            cur_reward = self.build_bleu_discriminator(
-    #                origin_inputs=origin_inputs,
-    #                gen_targets=roll_sample
-    #            )
-    #            rewards = tf.concat([rewards, cur_reward], axis=1)
-    #            return given_num + 1, rewards
+            def inner_loop(given_num, rewards):
+                tf.logging.info("given_num {}".format(given_num))
+                roll_sample = self.build_padding_rollout_generator(
+                    gen_samples=gen_targets,
+                    max_len=max_len,
+                    given_num=given_num
+                )
+                cur_reward = self.build_bleu_discriminator(
+                    origin_inputs=origin_inputs,
+                    gen_targets=roll_sample
+                )
+                rewards = tf.concat([rewards, cur_reward], axis=1)
+                return given_num + 1, rewards
 
-    #        _, rewards = tf.while_loop(
-    #            cond=lambda given_num, _: tf.less(given_num, max_len),
-    #            body=inner_loop,
-    #            loop_vars=[given_num, rewards],
-    #            shape_invariants=[tf.TensorShape([]),
-    #                              tf.TensorShape([None, None])]
-    #        )   # rewards [batch, max_len - 1]
-    #        tf.logging.info("rollout once need time:{}".format(time.time()-start_time))
-    #        total_rewards.append(tf.expand_dims(rewards, axis=1))  # roll_num * [batch, 1, max_len-1]
-    #    total_rewards = tf.concat(total_rewards, axis=1)  # [batch, roll_num, max_len-1]
-    #    total_rewards = tf.reduce_mean(total_rewards, axis=1, keepdims=False)  # [batch, max_len-1]
-    #    cur_reward = self.build_bleu_discriminator(origin_inputs=origin_inputs, gen_targets=gen_targets)
-    #    total_rewards = tf.concat([total_rewards, cur_reward], axis=1) # [batch, max_len]
-    #    total_rewards *= gen_targets_mask
-    #    return total_rewards
+            _, rewards = tf.while_loop(
+                cond=lambda given_num, _: tf.less(given_num, max_len),
+                body=inner_loop,
+                loop_vars=[given_num, rewards],
+                shape_invariants=[tf.TensorShape([]),
+                                  tf.TensorShape([None, None])]
+            )   # rewards [batch, max_len - 1]
+            tf.logging.info("rollout once need time:{}".format(time.time()-start_time))
+            total_rewards.append(tf.expand_dims(rewards, axis=1))  # roll_num * [batch, 1, max_len-1]
+        total_rewards = tf.concat(total_rewards, axis=1)  # [batch, roll_num, max_len-1]
+        total_rewards = tf.reduce_mean(total_rewards, axis=1, keepdims=False)  # [batch, max_len-1]
+        cur_reward = self.build_bleu_discriminator(origin_inputs=origin_inputs, gen_targets=gen_targets)
+        total_rewards = tf.concat([total_rewards, cur_reward], axis=1) # [batch, max_len]
+        total_rewards *= gen_targets_mask
+        return total_rewards
 
-    #def get_one_reward(self, origin_inputs, gen_targets, roll_num):
-    #    max_len = tf.shape(gen_targets)[1]
-    #    lengths = tf.reduce_sum(tf.cast(tf.not_equal(gen_targets, PAD_ID), tf.int32), axis=1)
-    #    min_len = lengths[tf.argmin(lengths)]
-    #    gen_targets_mask = tf.cast(tf.not_equal(gen_targets, PAD_ID), tf.float32)
-
-    #    given_num = tf.argmax(
-    #        tf.concat([tf.ones((1,), dtype=tf.float32) * (-1e5), tf.random_normal([min_len-1,], dtype=tf.float32)], 
-    #                  axis=0), output_type=tf.int32)
-    #    #print("given_num", given_num)
-    #    total_rewards = []
-    #    for i in range(roll_num):
-    #        tf.logging.info("roll_num: {}".format(i))
-    #        roll_sample = self.build_padding_rollout_generator(
-    #            gen_samples=gen_targets,
-    #            max_len=max_len,
-    #            given_num=given_num
-    #        )
-    #        #print("roll_sample", roll_sample)
-    #        cur_reward = self.build_bleu_discriminator(
-    #            origin_inputs=origin_inputs,
-    #            gen_targets=roll_sample
-    #        )   # [batch ,1]
-    #        total_rewards.append(cur_reward) # list, [batch,1] * roll_num
-    #    total_rewards = tf.reduce_mean(tf.concat(total_rewards, axis=1), axis=1) # [bacth, roll_num] -> [batch, 1]
-    #    return given_num, total_rewards
-
-    def get_one_reward_baseline(self, origin_inputs, gen_targets, roll_num):
-        self.baseline = self.build_bleu_discriminator(origin_inputs=origin_inputs,
-                                                 gen_targets=gen_targets)
-        tf.identity(self.baseline[:5], "baseline")
+    def get_one_reward(self, origin_inputs, gen_targets, roll_num):
         max_len = tf.shape(gen_targets)[1]
         lengths = tf.reduce_sum(tf.cast(tf.not_equal(gen_targets, PAD_ID), tf.int32), axis=1)
         min_len = lengths[tf.argmin(lengths)]
@@ -217,7 +190,7 @@ class Transformer(object):
         given_num = tf.argmax(
             tf.concat([tf.ones((1,), dtype=tf.float32) * (-1e5), tf.random_normal([min_len-1,], dtype=tf.float32)], 
                       axis=0), output_type=tf.int32)
-        #print("given_num", given_num)
+        print("given_num", given_num)
         total_rewards = []
         for i in range(roll_num):
             tf.logging.info("roll_num: {}".format(i))
@@ -226,33 +199,65 @@ class Transformer(object):
                 max_len=max_len,
                 given_num=given_num
             )
-            #print("roll_sample", roll_sample)
+            print("roll_sample", roll_sample)
             cur_reward = self.build_bleu_discriminator(
                 origin_inputs=origin_inputs,
                 gen_targets=roll_sample
             )   # [batch ,1]
             total_rewards.append(cur_reward) # list, [batch,1] * roll_num
-        self.total_rewards = tf.reduce_mean(tf.concat(total_rewards, axis=1), axis=1) # [bacth, roll_num] -> [batch, ]
-        tf.identity(self.total_rewards[:5], "mean_rewards")
-        total_rewards_mb = tf.maximum(0.0, self.total_rewards - tf.reshape(self.baseline, [-1])) 
-        return given_num, total_rewards_mb
+        total_rewards = tf.reduce_mean(tf.concat(total_rewards, axis=1), axis=1) # [bacth, roll_num] -> [batch, 1]
+        return given_num, total_rewards
+
+    def get_one_reward_baseline(self, origin_inputs, gen_targets, roll_num):
+        baseline = self.build_bleu_discriminator(origin_inputs=origin_inputs,
+                                                 gen_targets=gen_targets)
+        tf.identity(baseline[:5], "baseline")
+        max_len = tf.shape(gen_targets)[1]
+        lengths = tf.reduce_sum(tf.cast(tf.not_equal(gen_targets, PAD_ID), tf.int32), axis=1)
+        min_len = lengths[tf.argmin(lengths)]
+        gen_targets_mask = tf.cast(tf.not_equal(gen_targets, PAD_ID), tf.float32)
+
+        given_num = tf.argmax(
+            tf.concat([tf.ones((1,), dtype=tf.float32) * (-1e5), tf.random_normal([min_len-1,], dtype=tf.float32)], 
+                      axis=0), output_type=tf.int32)
+        print("given_num", given_num)
+        total_rewards = []
+        for i in range(roll_num):
+            tf.logging.info("roll_num: {}".format(i))
+            roll_sample = self.build_padding_rollout_generator(
+                gen_samples=gen_targets,
+                max_len=max_len,
+                given_num=given_num
+            )
+            print("roll_sample", roll_sample)
+            cur_reward = self.build_bleu_discriminator(
+                origin_inputs=origin_inputs,
+                gen_targets=roll_sample
+            )   # [batch ,1]
+            total_rewards.append(cur_reward) # list, [batch,1] * roll_num
+        total_rewards = tf.reduce_mean(tf.concat(total_rewards, axis=1), axis=1) # [bacth, roll_num] -> [batch, ]
+        tf.identity(total_rewards[:5], "mean_rewards")
+        total_rewards = tf.maximum(0.0, total_rewards - tf.reshape(baseline, [-1])) 
+        return given_num, total_rewards
     
-    #def get_g_loss(self, gen_targets, rewards):
-    #    with tf.variable_scope("Transformer", initializer=self._initializer, reuse=tf.AUTO_REUSE):
-    #        logits = self.decode(targets=gen_targets, encoder_outputs=self.encoder_outputs,
-    #                             attention_bias=self.attention_bias)
-    #        batch_size = tf.shape(gen_targets)[0]
-    #        probs = tf.nn.softmax(logits, axis=-1)
-    #        log_probs = tf.reduce_sum(
-    #            tf.one_hot(tf.reshape(gen_targets, [-1]), self.params.target_vocab_size, 1.0, 0.0) * tf.log(
-    #            tf.clip_by_value(tf.reshape(probs, [-1, self.params.target_vocab_size]), 1e-20, 1.0)), axis=1)
-    #        rewards = tf.stop_gradient(rewards)
-    #        g_loss = - tf.reduce_sum(log_probs * tf.reshape(rewards, [-1])) / tf.to_float(batch_size)
-    #        return g_loss
+
+
+    def get_g_loss(self, gen_targets, rewards):
+        with tf.variable_scope("Transformer", initializer=self._initializer, reuse=tf.AUTO_REUSE):
+            logits = self.decode(targets=gen_targets, encoder_outputs=self.encoder_outputs,
+                                 attention_bias=self.attention_bias)
+            batch_size = tf.shape(gen_targets)[0]
+            probs = tf.nn.softmax(logits, axis=-1)
+            log_probs = tf.reduce_sum(
+                tf.one_hot(tf.reshape(gen_targets, [-1]), self.params.target_vocab_size, 1.0, 0.0) * tf.log(
+                tf.clip_by_value(tf.reshape(probs, [-1, self.params.target_vocab_size]), 1e-20, 1.0)), axis=1)
+            rewards = tf.stop_gradient(rewards)
+            g_loss = - tf.reduce_sum(log_probs * tf.reshape(rewards, [-1])) / tf.to_float(batch_size)
+            return g_loss
 
     def get_one_g_loss(self, gen_targets, given_num, rewards):
         given_y = gen_targets[:, :given_num]
-        #print("given_y", given_y)
+        print("given_y", given_y)
         with tf.variable_scope("Transformer", initializer=self._initializer, reuse=tf.AUTO_REUSE):
             logits = self.decode(targets=given_y, encoder_outputs=self.encoder_outputs,
                                  attention_bias=self.attention_bias)

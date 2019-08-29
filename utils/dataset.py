@@ -164,6 +164,7 @@ class Dataset(object):
     def train_input_fn(self, params):
         # 文件名模板
         file_pattern = os.path.join(getattr(params, "data_dir", ""), "*train*")
+        print("file_pattern", file_pattern)
         is_reversed = getattr(params, 'is_reversed')
         dataset = self._read_and_batch_from_tfrecord(file_pattern, params.batch_size,
                                                      params.max_length,
@@ -183,6 +184,7 @@ class Dataset(object):
     def train_input_fn_mono(self, params):
         # 文件名模板
         file_pattern = os.path.join(getattr(params, "data_dir_mono", ""), "*train*")
+        print("file_pattern", file_pattern)
         is_reversed = getattr(params, 'is_reversed')
         dataset = self._read_and_batch_from_tfrecord(file_pattern, params.batch_size,
                                                      params.max_length,
@@ -319,9 +321,10 @@ class MyDataset(object):
 
 if __name__ == "__main__":
     class Params(object):
-        data_dir = "/home/work/xiepan/xp_dial/gan_nmt/transformer_rl/data/en-tr/v1_mono/gen_data"
+        data_dir_mono = "/home/work/xiepan/xp_dial/gan_nmt/transformer_rl/data/en-tr/v1_mono/gen_data"
+        data_dir = "/home/work/xiepan/xp_dial/gan_nmt/transformer_rl/data/en-tr/v1/gen_data"
         is_reversed = False
-        batch_size = 5  # 这里的batch_size 不是最终的batch_size,这个值必须大于 max_length
+        batch_size = 500  # 这里的batch_size 不是最终的batch_size,这个值必须大于 max_length
         max_length = 50
         num_parallel_calls = 6
         repeat_dataset = 1
@@ -337,18 +340,17 @@ if __name__ == "__main__":
     #        break
     #    print(content[0].shape)
     params = Params()
-    dataset = MyDataset(params)
-    batch = dataset.train_input_fn(params)
+    dataset = Dataset(params)
+    input_fn = dataset.train_input_fn_mono(params)
     #iterator = train_dataset.make_initializable_iterator()
     #batch = iterator.get_next()
-    print(batch)
 
-    #with tf.Session() as sess:
-    #    #sess.run(iterator.initializer)
-    #    while True:
-    #        try:
-    #            src, tgt = sess.run(batch)
-    #            print("src, ", src[:2])
-    #            print("tgt, ", tgt.shape)
-    #        except tf.errors.OutOfRangeError:
-    #            break
+    with tf.Session() as sess:
+        sess.run(input_fn.initializer)
+        while True:
+            try:
+                src, tgt = sess.run([input_fn.source, input_fn.target])
+                print("src, ", src[:2])
+                print("tgt, ", tgt.shape)
+            except tf.errors.OutOfRangeError:
+                break

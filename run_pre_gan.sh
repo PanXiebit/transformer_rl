@@ -1,17 +1,19 @@
 #!bin/bash
 
 
-export CUDA_VISIBLE_DEVICES="0,1"
+export CUDA_VISIBLE_DEVICES="5,6"
 export LD_LIBRARY_PATH=/usr/local/nccl_2.3.4/lib:$LD_LIBRARY_PATH
 
 # sharing embedding
-python3 main_pretrain.py \
+python3 main_pre_gan.py \
     --num_gpus 2 \
+    --roll_num 5 \
     --param_set base \
     --data_dir /home/work/xiepan/xp_dial/gan_nmt/transformer_rl/data/en-tr/v1/gen_data \
-    --model_dir /home/work/xiepan/xp_dial/gan_nmt/transformer_rl_sess/model_save/en-tr/share/base/train_base \
+    --model_dir /home/work/xiepan/xp_dial/gan_nmt/transformer_rl_sess/model_save/en-tr/share/base/train_pre_gan \
+    --pretrain_dir /home/work/xiepan/xp_dial/gan_nmt/transformer_rl_sess/model_save/en-tr/share/base/train_base \
     --learning_rate 2.0 \
-    --batch_size  10000 \
+    --batch_size  3000 \
     --max_length 50 \
     --fro src \
     --to tgt \
