@@ -4,7 +4,7 @@ from config import flags_obj
 import os
 from utils import dataset, metrics, tokenizer
 from six.moves import xrange  # pylint: disable=redefined-builtin
-from model import transformer_5
+from model import transformer_8
 import re, time, math
 import numpy as np
 from datetime import datetime
@@ -153,13 +153,13 @@ def tower_loss(scope, model, input_fn):
 
 def evaluation(model, input_fn):
    tf.logging.info("!!!Build graph for evaluation!!!")
-    #predictions = model.build_pretrain(input_fn.source, targets=None)
-    logits = model.build_pretrain(input_fn.source, input_fn.target)
-    xentropy, weights = metrics.padded_cross_entropy_loss(
-    logits, input_fn.target, params.label_smoothing, params.target_vocab_size)
-    loss = tf.reduce_sum(xentropy) / tf.reduce_sum(weights) 
-    #return predictions, input_fn.target
-    return loss, logits, input_fn.target
+   #predictions = model.build_pretrain(input_fn.source, targets=None)
+   logits = model.build_pretrain(input_fn.source, input_fn.target)
+   xentropy, weights = metrics.padded_cross_entropy_loss(
+   logits, input_fn.target, params.label_smoothing, params.target_vocab_size)
+   loss = tf.reduce_sum(xentropy) / tf.reduce_sum(weights) 
+   #return predictions, input_fn.target
+   return loss, logits, input_fn.target
 
 
 def array_to_string(samples):
@@ -197,7 +197,7 @@ def train(params):
         valid_iterator = my_dataset.eval_input_fn(params)
 
         tower_grads = []
-        model = transformer_5.Transformer(params, is_train=True)
+        model = transformer_8.Transformer(params, is_train=True)
         with tf.variable_scope(tf.get_variable_scope(), reuse=tf.AUTO_REUSE):
             #tf.logging.info(tf.get_variable_scope())
             for i in xrange(flags_obj.num_gpus):
@@ -354,7 +354,7 @@ def train(params):
 
 def main(argv=None):  # pylint: disable=unused-argument
     if tf.gfile.Exists(flags_obj.model_dir):
-        tf.gfile.DeleteRecursively(flags_obj.model_dir)
+        #tf.gfile.DeleteRecursively(flags_obj.model_dir)
         #tf.logging.info("flags_obj.model_dir")
         pass
     else:
