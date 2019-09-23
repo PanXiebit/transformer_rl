@@ -3165,3 +3165,884 @@ INFO:tensorflow:2019-08-30 17:07:50.987615: step 62200, loss = 1.1162, mono_loss
 INFO:tensorflow:2019-08-30 17:25:27.298604: step 62300, loss = 1.1464, mono_loss = 1.2169, mono_g_loss = 0.0103, rewards = [0.         0.         0.         0.06681561 0.        ], learning_rate = 0.000058, (896.3 examples/sec; 3.347 sec/batch)
 INFO:tensorflow:2019-08-30 17:42:42.243870: step 62400, loss = 1.2211, mono_loss = 1.3840, mono_g_loss = 0.0122, rewards = [0.        0.02618   0.0047907 0.        0.       ], learning_rate = 0.000058, (654.1 examples/sec; 4.586 sec/batch)
 INFO:tensorflow:2019-08-30 17:59:18.832927: step 62500, loss = 1.1425, mono_loss = 1.3071, mono_g_loss = 0.0107, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000058, (798.9 examples/sec; 3.755 sec/batch)
+INFO:tensorflow:2019-08-30 18:16:35.266329: step 62600, loss = 1.1250, mono_loss = 1.6825, mono_g_loss = 0.0101, rewards = [0.         0.         0.         0.02375124 0.        ], learning_rate = 0.000058, (443.8 examples/sec; 6.760 sec/batch)
+INFO:tensorflow:2019-08-30 18:33:25.965738: step 62700, loss = 1.2112, mono_loss = 1.4079, mono_g_loss = 0.0153, rewards = [0.         0.         0.09590957 0.01571208 0.07887785], learning_rate = 0.000058, (565.8 examples/sec; 5.302 sec/batch)
+INFO:tensorflow:2019-08-30 18:50:41.308901: step 62800, loss = 1.1417, mono_loss = 1.1965, mono_g_loss = 0.0066, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000058, (581.2 examples/sec; 5.162 sec/batch)
+INFO:tensorflow:2019-08-30 19:07:55.757884: step 62900, loss = 1.2500, mono_loss = 1.4710, mono_g_loss = 0.0100, rewards = [0.         0.18281995 0.         0.06365466 0.        ], learning_rate = 0.000058, (554.0 examples/sec; 5.415 sec/batch)
+INFO:tensorflow:2019-08-30 19:25:01.915632: step 63000, loss = 1.1849, mono_loss = 1.5182, mono_g_loss = 0.0045, rewards = [0.         0.         0.02958421 0.         0.        ], learning_rate = 0.000058, (558.3 examples/sec; 5.373 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...63000 -----------------
+INFO:tensorflow:Validation step ...63000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.22617, step_loss: 2.4424
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.22319, step_loss: 2.3089
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22214, step_loss: 2.3098
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20484, step_loss: 2.4400
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.20800, step_loss: 2.2684
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.20461, step_loss: 2.5310
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.30543, step_loss: 1.1914
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.22648, step_loss: 1.9059
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.28814, step_loss: 1.6878
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.26066, step_loss: 1.8857
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.18764, step_loss: 2.4103
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.19755, step_loss: 1.9725
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.17558, step_loss: 2.4046
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.20400, step_loss: 2.4648
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.23685, step_loss: 2.1952
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.20798, step_loss: 2.0549
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.28323, step_loss: 1.9932
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.26752, step_loss: 1.9192
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.26277, step_loss: 2.1174
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.22211, step_loss: 2.2424
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21714, step_loss: 2.3099
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.12708, step_loss: 2.6101
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.23678, step_loss: 2.2070
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19856, step_loss: 2.4291
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.19468, step_loss: 2.5846
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.14455, step_loss: 2.9283
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18916, step_loss: 2.4720
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.13951, step_loss: 2.8426
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.18685, step_loss: 2.5205
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.22959, step_loss: 2.0568
+INFO:tensorflow:prediction:
+<2en> yaklaşık ğ@@ ü@@ t@@ lü@@ fo@@ me ile yola cılar 'ya gitmek etmek me@@ tro@@ bus s , yaklaşık 00 : 30 sır@@ alarında zincir@@ lik@@ uyu otobüs dur@@ , yol önünde geçen için yav@@ uz@@ can dul@@ gun 'i çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-30 19:25:22.662963, Step: 63000, Valid loss: 2.243289, Valid bleu : 0.221388
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-30 19:42:39.479919: step 63100, loss = 1.1308, mono_loss = 1.4854, mono_g_loss = 0.0084, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000058, (567.0 examples/sec; 5.291 sec/batch)
+INFO:tensorflow:2019-08-30 20:00:03.572101: step 63200, loss = 1.1715, mono_loss = 1.4496, mono_g_loss = 0.0081, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000058, (588.1 examples/sec; 5.101 sec/batch)
+INFO:tensorflow:2019-08-30 20:16:46.132297: step 63300, loss = 1.2448, mono_loss = 0.9235, mono_g_loss = 0.0061, rewards = [0.         0.         0.         0.         0.01663452], learning_rate = 0.000058, (687.7 examples/sec; 4.362 sec/batch)
+INFO:tensorflow:2019-08-30 20:33:56.834490: step 63400, loss = 1.0642, mono_loss = 1.6673, mono_g_loss = 0.0014, rewards = [0.         0.         0.07546281 0.         0.06527235], learning_rate = 0.000058, (635.5 examples/sec; 4.721 sec/batch)
+INFO:tensorflow:2019-08-30 20:50:44.570122: step 63500, loss = 1.1942, mono_loss = 1.7391, mono_g_loss = 0.0010, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000058, (474.3 examples/sec; 6.325 sec/batch)
+INFO:tensorflow:2019-08-30 21:07:44.554441: step 63600, loss = 1.0726, mono_loss = 1.2601, mono_g_loss = 0.0002, rewards = [0.         0.         0.04980916 0.00844929 0.0346344 ], learning_rate = 0.000058, (587.0 examples/sec; 5.111 sec/batch)
+INFO:tensorflow:2019-08-30 21:24:47.692287: step 63700, loss = 1.2118, mono_loss = 1.6826, mono_g_loss = 0.0254, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000058, (511.5 examples/sec; 5.865 sec/batch)
+INFO:tensorflow:2019-08-30 21:41:53.000856: step 63800, loss = 0.4961, mono_loss = 1.8051, mono_g_loss = 0.0274, rewards = [0.         0.         0.         0.02182358 0.10476559], learning_rate = 0.000058, (481.7 examples/sec; 6.228 sec/batch)
+INFO:tensorflow:2019-08-30 21:59:30.440535: step 63900, loss = 1.1921, mono_loss = 1.0425, mono_g_loss = 0.0047, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000058, (852.3 examples/sec; 3.520 sec/batch)
+INFO:tensorflow:2019-08-30 22:16:40.548479: step 64000, loss = 1.1213, mono_loss = 1.3421, mono_g_loss = 0.0126, rewards = [0.05131901 0.         0.         0.         0.        ], learning_rate = 0.000058, (535.0 examples/sec; 5.607 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...64000 -----------------
+INFO:tensorflow:Validation step ...64000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21460, step_loss: 2.4824
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.22593, step_loss: 2.3383
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.21758, step_loss: 2.3009
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.19691, step_loss: 2.4005
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.20271, step_loss: 2.2682
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19797, step_loss: 2.5623
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.28079, step_loss: 1.1929
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.18565, step_loss: 1.9225
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.26954, step_loss: 1.6746
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.28219, step_loss: 1.9874
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.17963, step_loss: 2.4106
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.21680, step_loss: 2.0253
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.20893, step_loss: 2.3750
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.19738, step_loss: 2.4339
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.21720, step_loss: 2.1966
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.23109, step_loss: 2.0483
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.27597, step_loss: 1.9588
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.26909, step_loss: 1.9252
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.25248, step_loss: 2.0880
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.22071, step_loss: 2.2886
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21422, step_loss: 2.2532
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.14489, step_loss: 2.6284
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.23897, step_loss: 2.1946
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19555, step_loss: 2.4646
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.19309, step_loss: 2.6888
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.18477, step_loss: 2.8538
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18334, step_loss: 2.5009
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.13499, step_loss: 2.8604
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.20164, step_loss: 2.5005
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.19697, step_loss: 2.2118
+INFO:tensorflow:prediction:
+<2en> yaklaşık ğ@@ ü@@ t@@ lü@@ fo@@ me 'den yola cılar çarp@@ giden etmek bir tro@@ bus s , saat 00 00 00 sularında alarında zincir@@ lik@@ uyu otobüs ağında yol yol kenar@@ geçen için yav@@ uz@@ can dul@@ gun 'a giden an . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-30 22:16:59.545515, Step: 64000, Valid loss: 2.247345, Valid bleu : 0.218149
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-30 22:33:48.730076: step 64100, loss = 1.0794, mono_loss = 1.3745, mono_g_loss = 0.0066, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000058, (586.9 examples/sec; 5.111 sec/batch)
+INFO:tensorflow:2019-08-30 22:50:59.811717: step 64200, loss = 0.9613, mono_loss = 1.4584, mono_g_loss = 0.0009, rewards = [0.02868642 0.         0.         0.         0.        ], learning_rate = 0.000058, (880.0 examples/sec; 3.409 sec/batch)
+INFO:tensorflow:2019-08-30 23:08:01.335525: step 64300, loss = 0.9524, mono_loss = 1.4956, mono_g_loss = 0.0147, rewards = [0.         0.         0.         0.         0.00646516], learning_rate = 0.000058, (588.8 examples/sec; 5.095 sec/batch)
+INFO:tensorflow:2019-08-30 23:24:09.224532: step 64400, loss = 1.1551, mono_loss = 1.2065, mono_g_loss = 0.0056, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000058, (813.3 examples/sec; 3.689 sec/batch)
+INFO:tensorflow:2019-08-30 23:41:00.482763: step 64500, loss = 1.0268, mono_loss = 1.5581, mono_g_loss = 0.0035, rewards = [0.         0.00812353 0.         0.         0.        ], learning_rate = 0.000058, (467.6 examples/sec; 6.416 sec/batch)
+INFO:tensorflow:2019-08-30 23:57:40.007716: step 64600, loss = 1.2555, mono_loss = 1.4572, mono_g_loss = 0.0008, rewards = [0.         0.         0.         0.         0.03899553], learning_rate = 0.000058, (503.9 examples/sec; 5.954 sec/batch)
+INFO:tensorflow:2019-08-31 00:14:51.499024: step 64700, loss = 1.2055, mono_loss = 1.5456, mono_g_loss = 0.0121, rewards = [0.         0.0375957  0.         0.         0.01092185], learning_rate = 0.000058, (549.9 examples/sec; 5.456 sec/batch)
+INFO:tensorflow:2019-08-31 00:32:07.879321: step 64800, loss = 1.1217, mono_loss = 1.6520, mono_g_loss = 0.0185, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (418.2 examples/sec; 7.174 sec/batch)
+INFO:tensorflow:2019-08-31 00:48:27.900499: step 64900, loss = 1.1654, mono_loss = 1.0992, mono_g_loss = 0.0045, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (905.9 examples/sec; 3.312 sec/batch)
+INFO:tensorflow:2019-08-31 01:05:17.491412: step 65000, loss = 1.0502, mono_loss = 1.4018, mono_g_loss = 0.0130, rewards = [0.         0.         0.00985185 0.         0.        ], learning_rate = 0.000057, (570.9 examples/sec; 5.255 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...65000 -----------------
+INFO:tensorflow:Validation step ...65000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21845, step_loss: 2.4807
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.21868, step_loss: 2.3106
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22950, step_loss: 2.3090
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20495, step_loss: 2.4109
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.21164, step_loss: 2.2977
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19618, step_loss: 2.5117
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.31455, step_loss: 1.2232
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.22752, step_loss: 2.0052
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.26803, step_loss: 1.7001
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.20796, step_loss: 2.0424
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.17243, step_loss: 2.4232
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.21458, step_loss: 1.9552
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.20208, step_loss: 2.3441
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.19226, step_loss: 2.4378
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.19614, step_loss: 2.2004
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.20975, step_loss: 2.0065
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.28905, step_loss: 1.9809
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.27927, step_loss: 1.8763
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.24665, step_loss: 2.1453
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.22842, step_loss: 2.2507
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.23108, step_loss: 2.2698
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.15139, step_loss: 2.7358
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.24538, step_loss: 2.2254
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.20141, step_loss: 2.4650
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.19042, step_loss: 2.5903
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.15360, step_loss: 2.8847
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18700, step_loss: 2.5219
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.13995, step_loss: 2.8615
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.19096, step_loss: 2.4739
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.22145, step_loss: 2.3172
+INFO:tensorflow:prediction:
+<2en> hun@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me giden yola cılar 'ya gitmek edecek bir tro@@ bus s@@ bir aniden 00 'de 00 sularında alarında zincir@@ lik@@ uyu otobüs ağında yol aş@@ geç@@ geçen üzere yav@@ uz@@ can dul@@ gun 'a giden tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-31 01:05:42.946046, Step: 65000, Valid loss: 2.249663, Valid bleu : 0.220382
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-31 01:22:10.794714: step 65100, loss = 0.9723, mono_loss = 1.7123, mono_g_loss = 0.0023, rewards = [0.         0.         0.01671739 0.0102488  0.        ], learning_rate = 0.000057, (638.7 examples/sec; 4.697 sec/batch)
+INFO:tensorflow:2019-08-31 01:39:20.865767: step 65200, loss = 1.2075, mono_loss = 1.0123, mono_g_loss = 0.0075, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (733.7 examples/sec; 4.089 sec/batch)
+INFO:tensorflow:2019-08-31 01:56:12.363860: step 65300, loss = 1.2533, mono_loss = 1.3706, mono_g_loss = 0.0110, rewards = [0.         0.00825246 0.         0.         0.        ], learning_rate = 0.000057, (536.7 examples/sec; 5.590 sec/batch)
+INFO:tensorflow:2019-08-31 02:12:49.027199: step 65400, loss = 1.2866, mono_loss = 1.5219, mono_g_loss = 0.0199, rewards = [0.00486098 0.         0.00017759 0.06249262 0.0247509 ], learning_rate = 0.000057, (639.1 examples/sec; 4.694 sec/batch)
+INFO:tensorflow:2019-08-31 02:29:55.662065: step 65500, loss = 1.1071, mono_loss = 1.7598, mono_g_loss = 0.0023, rewards = [0.00570564 0.         0.         0.         0.        ], learning_rate = 0.000057, (417.1 examples/sec; 7.193 sec/batch)
+INFO:tensorflow:2019-08-31 02:47:28.575326: step 65600, loss = 1.1394, mono_loss = 1.5137, mono_g_loss = 0.0136, rewards = [0.         0.01076027 0.         0.         0.        ], learning_rate = 0.000057, (566.5 examples/sec; 5.295 sec/batch)
+INFO:tensorflow:2019-08-31 03:04:27.636081: step 65700, loss = 0.6445, mono_loss = 0.6693, mono_g_loss = 0.0037, rewards = [0.         0.         0.02975064 0.         0.        ], learning_rate = 0.000057, (847.1 examples/sec; 3.542 sec/batch)
+INFO:tensorflow:2019-08-31 03:21:18.924824: step 65800, loss = 1.2380, mono_loss = 1.4415, mono_g_loss = 0.0134, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (601.3 examples/sec; 4.989 sec/batch)
+INFO:tensorflow:2019-08-31 03:38:31.703180: step 65900, loss = 1.0759, mono_loss = 1.5197, mono_g_loss = 0.0074, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (586.9 examples/sec; 5.111 sec/batch)
+INFO:tensorflow:2019-08-31 03:55:38.010700: step 66000, loss = 1.0877, mono_loss = 1.4016, mono_g_loss = 0.0120, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (505.6 examples/sec; 5.934 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...66000 -----------------
+INFO:tensorflow:Validation step ...66000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.20935, step_loss: 2.4890
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.22231, step_loss: 2.3021
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22913, step_loss: 2.3103
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.21059, step_loss: 2.3816
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.20587, step_loss: 2.2577
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19487, step_loss: 2.5246
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.31100, step_loss: 1.1564
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.22353, step_loss: 1.9335
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.24759, step_loss: 1.7217
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.24532, step_loss: 1.9629
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.19433, step_loss: 2.3584
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.22893, step_loss: 1.9624
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.20564, step_loss: 2.3395
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.20919, step_loss: 2.3955
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.20618, step_loss: 2.2081
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.24041, step_loss: 2.0168
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.29612, step_loss: 1.9863
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.26169, step_loss: 1.8905
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.26020, step_loss: 2.0949
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.21405, step_loss: 2.2627
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21222, step_loss: 2.2970
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.13217, step_loss: 2.6151
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.24243, step_loss: 2.1996
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19839, step_loss: 2.4474
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.18711, step_loss: 2.5834
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.15538, step_loss: 2.8281
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.19691, step_loss: 2.4881
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.15484, step_loss: 2.8205
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.18665, step_loss: 2.5298
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.19596, step_loss: 2.0817
+INFO:tensorflow:prediction:
+<2en> sö@@ ğ@@ ğ@@ c@@ lü@@ çeş@@ me 'yi ayrılan cılar çarp@@ gitmek eden me@@ tro@@ bus l , zincir@@ 00 00 00 sularında alarında zincir@@ lik@@ uyu otobü@@ ağının aniden geçen yakınındaki çıkan üzere yav@@ uz@@ can dul@@ gun 'a doğru tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-31 03:55:56.087875, Step: 66000, Valid loss: 2.235684, Valid bleu : 0.221112
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-31 04:13:15.981204: step 66100, loss = 1.2642, mono_loss = 1.7878, mono_g_loss = 0.0016, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (387.9 examples/sec; 7.733 sec/batch)
+INFO:tensorflow:2019-08-31 04:30:19.781182: step 66200, loss = 1.1497, mono_loss = 1.5032, mono_g_loss = 0.0162, rewards = [0.         0.14835414 0.02355107 0.         0.        ], learning_rate = 0.000057, (588.0 examples/sec; 5.102 sec/batch)
+INFO:tensorflow:2019-08-31 04:47:39.531317: step 66300, loss = 1.1903, mono_loss = 1.2713, mono_g_loss = 0.0089, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (592.4 examples/sec; 5.064 sec/batch)
+INFO:tensorflow:2019-08-31 05:04:33.416742: step 66400, loss = 1.0664, mono_loss = 1.2838, mono_g_loss = 0.0006, rewards = [0.00048202 0.00250387 0.01221753 0.002975   0.        ], learning_rate = 0.000057, (885.8 examples/sec; 3.387 sec/batch)
+INFO:tensorflow:2019-08-31 05:21:25.451033: step 66500, loss = 1.0618, mono_loss = 1.8254, mono_g_loss = 0.0006, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (675.5 examples/sec; 4.441 sec/batch)
+INFO:tensorflow:2019-08-31 05:38:56.107749: step 66600, loss = 1.0802, mono_loss = 1.3504, mono_g_loss = 0.0168, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (621.1 examples/sec; 4.830 sec/batch)
+INFO:tensorflow:2019-08-31 05:56:29.104887: step 66700, loss = 1.1425, mono_loss = 1.3924, mono_g_loss = 0.0138, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (704.1 examples/sec; 4.261 sec/batch)
+INFO:tensorflow:2019-08-31 06:13:32.861159: step 66800, loss = 1.0460, mono_loss = 1.5347, mono_g_loss = 0.0302, rewards = [0.01724751 0.         0.         0.         0.        ], learning_rate = 0.000057, (490.7 examples/sec; 6.113 sec/batch)
+INFO:tensorflow:2019-08-31 06:30:30.295386: step 66900, loss = 1.0659, mono_loss = 1.2765, mono_g_loss = 0.0114, rewards = [0.         0.         0.         0.         0.13041593], learning_rate = 0.000057, (606.6 examples/sec; 4.945 sec/batch)
+INFO:tensorflow:2019-08-31 06:47:34.589742: step 67000, loss = 1.1462, mono_loss = 1.4527, mono_g_loss = 0.0111, rewards = [0.         0.         0.06067328 0.24279495 0.        ], learning_rate = 0.000057, (498.1 examples/sec; 6.023 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...67000 -----------------
+INFO:tensorflow:Validation step ...67000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21843, step_loss: 2.5076
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.22536, step_loss: 2.2973
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.23469, step_loss: 2.3066
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20641, step_loss: 2.4139
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.20387, step_loss: 2.2910
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19628, step_loss: 2.5079
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.32666, step_loss: 1.2156
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.26886, step_loss: 1.9315
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.26174, step_loss: 1.6936
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.21153, step_loss: 1.9990
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.19843, step_loss: 2.3634
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.21975, step_loss: 1.9951
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.20878, step_loss: 2.4030
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.19090, step_loss: 2.4026
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.22742, step_loss: 2.1579
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.22748, step_loss: 1.9919
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.28006, step_loss: 1.9929
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.25375, step_loss: 1.8977
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.24489, step_loss: 2.0864
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.21746, step_loss: 2.2670
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21484, step_loss: 2.2700
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.11716, step_loss: 2.6209
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.22565, step_loss: 2.2117
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19385, step_loss: 2.4318
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.19338, step_loss: 2.6058
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.16148, step_loss: 2.7812
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.17523, step_loss: 2.4981
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.13598, step_loss: 2.8385
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.19454, step_loss: 2.5206
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.23195, step_loss: 2.1426
+INFO:tensorflow:prediction:
+<2en> saat ğ@@ r t@@ lü@@ çeş@@ me 'nin yola cılar çarp@@ giden eden bir tro@@ bus s , saat saat 00 30 sır@@ alarında zincir@@ lik@@ uyu otobüs u yol yol yanından geçen üzere yav@@ uz@@ can dul@@ gun 'a çarp@@ ması . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-31 06:47:55.636633, Step: 67000, Valid loss: 2.239656, Valid bleu : 0.219873
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-31 07:04:52.727775: step 67100, loss = 1.1925, mono_loss = 1.2386, mono_g_loss = 0.0023, rewards = [0.12705427 0.         0.         0.         0.11348815], learning_rate = 0.000057, (808.0 examples/sec; 3.713 sec/batch)
+INFO:tensorflow:2019-08-31 07:21:57.657755: step 67200, loss = 1.0746, mono_loss = 1.4071, mono_g_loss = 0.0229, rewards = [0.         0.05691082 0.         0.01936355 0.        ], learning_rate = 0.000057, (586.6 examples/sec; 5.114 sec/batch)
+INFO:tensorflow:2019-08-31 07:39:03.225848: step 67300, loss = 1.1722, mono_loss = 1.4687, mono_g_loss = 0.0075, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (610.1 examples/sec; 4.917 sec/batch)
+INFO:tensorflow:2019-08-31 07:55:59.859007: step 67400, loss = 0.5419, mono_loss = 1.4810, mono_g_loss = 0.0174, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (519.8 examples/sec; 5.771 sec/batch)
+INFO:tensorflow:2019-08-31 08:12:08.384643: step 67500, loss = 1.1047, mono_loss = 1.4409, mono_g_loss = 0.0285, rewards = [0.         0.00389366 0.02314506 0.         0.04188087], learning_rate = 0.000057, (590.1 examples/sec; 5.084 sec/batch)
+INFO:tensorflow:2019-08-31 08:29:38.181660: step 67600, loss = 0.9666, mono_loss = 1.8571, mono_g_loss = 0.0006, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (450.7 examples/sec; 6.656 sec/batch)
+INFO:tensorflow:2019-08-31 08:46:40.573905: step 67700, loss = 1.2156, mono_loss = 1.4151, mono_g_loss = 0.0000, rewards = [0.0256834 0.        0.        0.        0.       ], learning_rate = 0.000057, (899.2 examples/sec; 3.336 sec/batch)
+INFO:tensorflow:2019-08-31 09:03:53.475908: step 67800, loss = 1.2317, mono_loss = 1.4736, mono_g_loss = 0.0107, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (580.6 examples/sec; 5.167 sec/batch)
+INFO:tensorflow:2019-08-31 09:21:22.247791: step 67900, loss = 1.1339, mono_loss = 1.2197, mono_g_loss = 0.0089, rewards = [0.         0.         0.05518564 0.         0.        ], learning_rate = 0.000057, (924.2 examples/sec; 3.246 sec/batch)
+INFO:tensorflow:2019-08-31 09:38:45.635257: step 68000, loss = 1.1487, mono_loss = 1.7071, mono_g_loss = 0.0122, rewards = [0.         0.         0.00994134 0.         0.10756163], learning_rate = 0.000057, (428.7 examples/sec; 6.998 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...68000 -----------------
+INFO:tensorflow:Validation step ...68000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21882, step_loss: 2.4532
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.21933, step_loss: 2.3318
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22619, step_loss: 2.3161
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20334, step_loss: 2.4180
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.19864, step_loss: 2.2889
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19094, step_loss: 2.5164
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.30729, step_loss: 1.1775
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.22593, step_loss: 1.9082
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.26683, step_loss: 1.7086
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.22568, step_loss: 2.0347
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.19506, step_loss: 2.3602
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.20919, step_loss: 2.0083
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.20235, step_loss: 2.3496
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.17690, step_loss: 2.3884
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.19635, step_loss: 2.1654
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.22121, step_loss: 2.0580
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.30210, step_loss: 1.9730
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.27090, step_loss: 1.9117
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.25651, step_loss: 2.1095
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.21855, step_loss: 2.2457
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.22397, step_loss: 2.2913
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.13399, step_loss: 2.6127
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.24419, step_loss: 2.2136
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19292, step_loss: 2.4520
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.18323, step_loss: 2.6019
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.16930, step_loss: 2.8962
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.19810, step_loss: 2.4727
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.13785, step_loss: 2.8615
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.19629, step_loss: 2.5056
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.15838, step_loss: 2.4343
+INFO:tensorflow:prediction:
+<2en> av@@ ğ@@ üş@@ t@@ lü@@ fo@@ me 'ye yola cılar çarp@@ giden eden bir tro@@ bus l , gece 00 'de 00 : alarında zincir@@ lik@@ uyu otobüs u yol yol yakınlarında geçen için yav@@ uz@@ can dul@@ gun 'a giden ıt@@ . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-31 09:39:07.215190, Step: 68000, Valid loss: 2.242088, Valid bleu : 0.219399
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-31 09:56:14.963322: step 68100, loss = 1.1318, mono_loss = 1.5581, mono_g_loss = 0.0203, rewards = [0.00216017 0.03496785 0.         0.         0.        ], learning_rate = 0.000057, (626.1 examples/sec; 4.792 sec/batch)
+INFO:tensorflow:2019-08-31 10:13:19.925831: step 68200, loss = 1.2878, mono_loss = 1.4368, mono_g_loss = 0.0001, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000057, (520.7 examples/sec; 5.762 sec/batch)
+INFO:tensorflow:2019-08-31 10:30:24.417146: step 68300, loss = 1.2665, mono_loss = 1.3260, mono_g_loss = 0.0033, rewards = [0.         0.03037196 0.         0.         0.        ], learning_rate = 0.000057, (937.6 examples/sec; 3.200 sec/batch)
+INFO:tensorflow:2019-08-31 10:47:30.965480: step 68400, loss = 1.1337, mono_loss = 1.0334, mono_g_loss = 0.0046, rewards = [0.         0.         0.         0.         0.02146737], learning_rate = 0.000056, (925.2 examples/sec; 3.242 sec/batch)
+INFO:tensorflow:2019-08-31 11:04:56.183130: step 68500, loss = 1.1623, mono_loss = 1.6387, mono_g_loss = 0.0055, rewards = [0.04377993 0.         0.         0.00403476 0.        ], learning_rate = 0.000056, (567.4 examples/sec; 5.287 sec/batch)
+INFO:tensorflow:2019-08-31 11:21:56.463120: step 68600, loss = 1.1653, mono_loss = 1.4983, mono_g_loss = 0.0036, rewards = [0.03867817 0.         0.         0.         0.        ], learning_rate = 0.000056, (684.3 examples/sec; 4.384 sec/batch)
+INFO:tensorflow:2019-08-31 11:39:01.518709: step 68700, loss = 1.2073, mono_loss = 1.6385, mono_g_loss = 0.0142, rewards = [0.         0.         0.08835732 0.         0.        ], learning_rate = 0.000056, (539.5 examples/sec; 5.561 sec/batch)
+INFO:tensorflow:2019-08-31 11:55:49.895088: step 68800, loss = 1.0086, mono_loss = 1.5278, mono_g_loss = 0.0159, rewards = [0.         0.         0.         0.01896598 0.01378572], learning_rate = 0.000056, (565.1 examples/sec; 5.309 sec/batch)
+INFO:tensorflow:2019-08-31 12:13:04.491304: step 68900, loss = 1.1524, mono_loss = 1.0010, mono_g_loss = 0.0002, rewards = [0.         0.         0.00308434 0.11934088 0.12609494], learning_rate = 0.000056, (1141.7 examples/sec; 2.628 sec/batch)
+INFO:tensorflow:2019-08-31 12:29:56.525637: step 69000, loss = 1.0074, mono_loss = 1.6374, mono_g_loss = 0.0013, rewards = [0.         0.         0.08195171 0.11471385 0.        ], learning_rate = 0.000056, (512.1 examples/sec; 5.858 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...69000 -----------------
+INFO:tensorflow:Validation step ...69000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21692, step_loss: 2.4944
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.23194, step_loss: 2.3070
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.23657, step_loss: 2.3072
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20034, step_loss: 2.3689
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.20959, step_loss: 2.2818
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19873, step_loss: 2.5071
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.26457, step_loss: 1.2195
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.22605, step_loss: 1.8963
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.28085, step_loss: 1.6744
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.26822, step_loss: 1.9761
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.19199, step_loss: 2.3967
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.22681, step_loss: 1.9724
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.21539, step_loss: 2.3222
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.19084, step_loss: 2.4591
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.21248, step_loss: 2.2149
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.23164, step_loss: 2.0111
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.28408, step_loss: 1.9981
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.26085, step_loss: 1.9073
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.25568, step_loss: 2.1193
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.21928, step_loss: 2.2454
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.22235, step_loss: 2.2788
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.11737, step_loss: 2.7858
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.23546, step_loss: 2.1949
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.20871, step_loss: 2.4020
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.18895, step_loss: 2.5740
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.15587, step_loss: 2.8043
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18972, step_loss: 2.4858
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.14466, step_loss: 2.8399
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.20126, step_loss: 2.5025
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.28878, step_loss: 2.1293
+INFO:tensorflow:prediction:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ fo@@ me 'den yola cılar 'a giden eden bir tro@@ bus s , zincir@@ 00 : 30 sır@@ alarında zincir@@ lik@@ uyu otobü@@ uş yolu yol kenar@@ geçen için yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-31 12:30:16.868005, Step: 69000, Valid loss: 2.236311, Valid bleu : 0.222335
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-31 12:47:04.583128: step 69100, loss = 1.1468, mono_loss = 1.5266, mono_g_loss = 0.0094, rewards = [0.00786366 0.         0.01093267 0.00981615 0.        ], learning_rate = 0.000056, (485.0 examples/sec; 6.186 sec/batch)
+INFO:tensorflow:2019-08-31 13:04:24.476633: step 69200, loss = 1.1262, mono_loss = 1.2575, mono_g_loss = 0.0002, rewards = [0.07160217 0.14417678 0.         0.         0.        ], learning_rate = 0.000056, (1127.5 examples/sec; 2.661 sec/batch)
+INFO:tensorflow:2019-08-31 13:21:32.986364: step 69300, loss = 1.0806, mono_loss = 1.5561, mono_g_loss = 0.0189, rewards = [0.02285258 0.         0.         0.         0.00286399], learning_rate = 0.000056, (516.5 examples/sec; 5.808 sec/batch)
+INFO:tensorflow:2019-08-31 13:38:34.000372: step 69400, loss = 1.1534, mono_loss = 1.4279, mono_g_loss = 0.0004, rewards = [0.         0.         0.00376187 0.03184069 0.11132658], learning_rate = 0.000056, (578.2 examples/sec; 5.189 sec/batch)
+INFO:tensorflow:2019-08-31 13:55:00.205513: step 69500, loss = 1.1275, mono_loss = 1.3425, mono_g_loss = 0.0080, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000056, (544.8 examples/sec; 5.506 sec/batch)
+INFO:tensorflow:2019-08-31 14:11:59.221675: step 69600, loss = 1.2478, mono_loss = 1.3701, mono_g_loss = 0.0079, rewards = [0.         0.         0.         0.         0.03712773], learning_rate = 0.000056, (625.0 examples/sec; 4.800 sec/batch)
+INFO:tensorflow:2019-08-31 14:29:05.222717: step 69700, loss = 1.1168, mono_loss = 1.3712, mono_g_loss = 0.0153, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000056, (659.2 examples/sec; 4.551 sec/batch)
+INFO:tensorflow:2019-08-31 14:45:59.690355: step 69800, loss = 1.2073, mono_loss = 1.3261, mono_g_loss = 0.0027, rewards = [0.0496638  0.         0.         0.01907417 0.        ], learning_rate = 0.000056, (735.2 examples/sec; 4.081 sec/batch)
+INFO:tensorflow:2019-08-31 15:03:00.578764: step 69900, loss = 1.0157, mono_loss = 1.2292, mono_g_loss = 0.0034, rewards = [0.         0.         0.         0.         0.01044456], learning_rate = 0.000056, (906.9 examples/sec; 3.308 sec/batch)
+INFO:tensorflow:2019-08-31 15:20:23.434157: step 70000, loss = 1.2336, mono_loss = 1.6838, mono_g_loss = 0.0060, rewards = [0.         0.         0.00642971 0.         0.        ], learning_rate = 0.000056, (474.5 examples/sec; 6.322 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...70000 -----------------
+INFO:tensorflow:Validation step ...70000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.22221, step_loss: 2.4506
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.23480, step_loss: 2.3131
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22544, step_loss: 2.3049
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20940, step_loss: 2.4155
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.21244, step_loss: 2.2516
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.18451, step_loss: 2.5606
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.29889, step_loss: 1.1970
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.24498, step_loss: 1.8463
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.30035, step_loss: 1.6108
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.25271, step_loss: 1.9812
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.18758, step_loss: 2.3692
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.21133, step_loss: 2.0269
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.18895, step_loss: 2.3434
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.18211, step_loss: 2.4276
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.20740, step_loss: 2.1862
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.22406, step_loss: 2.0331
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.29891, step_loss: 1.9971
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.25094, step_loss: 1.9345
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.25025, step_loss: 2.1083
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.22346, step_loss: 2.2341
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.20514, step_loss: 2.2840
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.14945, step_loss: 2.6147
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.23891, step_loss: 2.2132
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.20286, step_loss: 2.4587
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.18266, step_loss: 2.6453
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.16822, step_loss: 2.9399
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.19230, step_loss: 2.4641
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.13504, step_loss: 2.8926
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.19225, step_loss: 2.5078
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.27508, step_loss: 2.1342
+INFO:tensorflow:prediction:
+<2en> yaklaşık ğ@@ ü@@ t@@ lü@@ çeş@@ me 'ye yola cılar çarp@@ gitmek etmek bir tro@@ bus l , yaklaşık 00 'ü 00 sularında alarında zincir@@ lik@@ uyu otobüs ağında aniden giden yakınlarında geçen için yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-31 15:20:46.249700, Step: 70000, Valid loss: 2.238439, Valid bleu : 0.221102
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-31 15:37:26.245371: step 70100, loss = 1.1131, mono_loss = 1.4556, mono_g_loss = 0.0329, rewards = [0.         0.00747446 0.01828086 0.         0.        ], learning_rate = 0.000056, (614.4 examples/sec; 4.883 sec/batch)
+INFO:tensorflow:2019-08-31 15:54:45.601135: step 70200, loss = 1.1631, mono_loss = 1.4088, mono_g_loss = 0.0092, rewards = [0.        0.        0.        0.0702299 0.       ], learning_rate = 0.000056, (603.4 examples/sec; 4.972 sec/batch)
+INFO:tensorflow:2019-08-31 16:12:01.173237: step 70300, loss = 0.9445, mono_loss = 1.4379, mono_g_loss = 0.0078, rewards = [0.05323403 0.         0.         0.         0.02300187], learning_rate = 0.000056, (453.8 examples/sec; 6.611 sec/batch)
+INFO:tensorflow:2019-08-31 16:28:32.860812: step 70400, loss = 1.2571, mono_loss = 1.2368, mono_g_loss = 0.0120, rewards = [0.         0.         0.         0.02600218 0.        ], learning_rate = 0.000056, (747.7 examples/sec; 4.012 sec/batch)
+INFO:tensorflow:2019-08-31 16:45:35.322512: step 70500, loss = 1.1885, mono_loss = 0.9903, mono_g_loss = 0.0070, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000056, (819.5 examples/sec; 3.661 sec/batch)
+INFO:tensorflow:2019-08-31 17:01:49.331816: step 70600, loss = 1.0743, mono_loss = 1.7446, mono_g_loss = 0.0387, rewards = [0.         0.06141665 0.02167704 0.         0.        ], learning_rate = 0.000056, (467.7 examples/sec; 6.414 sec/batch)
+INFO:tensorflow:2019-08-31 17:19:12.889384: step 70700, loss = 1.0892, mono_loss = 1.5649, mono_g_loss = 0.0076, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000056, (521.2 examples/sec; 5.756 sec/batch)
+INFO:tensorflow:2019-08-31 17:36:25.207825: step 70800, loss = 1.1895, mono_loss = 1.6893, mono_g_loss = 0.0050, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000056, (517.1 examples/sec; 5.801 sec/batch)
+INFO:tensorflow:2019-08-31 17:52:36.348971: step 70900, loss = 1.1056, mono_loss = 1.2154, mono_g_loss = 0.0117, rewards = [0.         0.         0.         0.         0.00742955], learning_rate = 0.000056, (615.4 examples/sec; 4.875 sec/batch)
+INFO:tensorflow:2019-08-31 18:09:38.423332: step 71000, loss = 1.2392, mono_loss = 1.4403, mono_g_loss = 0.0024, rewards = [0.        0.        0.        0.        0.0149978], learning_rate = 0.000056, (555.0 examples/sec; 5.405 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...71000 -----------------
+INFO:tensorflow:Validation step ...71000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.22239, step_loss: 2.4989
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.22776, step_loss: 2.2862
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22173, step_loss: 2.3334
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.19972, step_loss: 2.4102
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.21101, step_loss: 2.2478
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19676, step_loss: 2.5650
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.29333, step_loss: 1.1981
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.20604, step_loss: 1.9563
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.28091, step_loss: 1.6854
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.22726, step_loss: 2.0485
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.17979, step_loss: 2.4147
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.21666, step_loss: 1.9490
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.21439, step_loss: 2.3489
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.22236, step_loss: 2.4044
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.20570, step_loss: 2.2064
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.21997, step_loss: 2.0342
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.28752, step_loss: 2.0078
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.27131, step_loss: 1.8859
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.23565, step_loss: 2.1260
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.23028, step_loss: 2.2252
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21945, step_loss: 2.2770
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.12750, step_loss: 2.6674
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.23554, step_loss: 2.2214
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.20145, step_loss: 2.4474
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.20219, step_loss: 2.6122
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.16180, step_loss: 2.8591
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18863, step_loss: 2.4582
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.15247, step_loss: 2.8310
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.18946, step_loss: 2.5319
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.22698, step_loss: 2.2664
+INFO:tensorflow:prediction:
+<2en> yaklaşık ğ@@ ün t@@ lü@@ çeş@@ menin 'den yola cılar 'a giden etmek se@@ tro@@ bus s , zincir@@ 00 : 00 sularında alarında zincir@@ lik@@ uyu otobüs duğu yol yol kenar@@ geçen üzere yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-31 18:10:04.213871, Step: 71000, Valid loss: 2.243037, Valid bleu : 0.220754
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-31 18:27:05.144474: step 71100, loss = 0.5407, mono_loss = 0.6662, mono_g_loss = 0.0056, rewards = [0.         0.         0.         0.00259888 0.        ], learning_rate = 0.000056, (863.4 examples/sec; 3.475 sec/batch)
+INFO:tensorflow:2019-08-31 18:43:38.321288: step 71200, loss = 1.2567, mono_loss = 1.2237, mono_g_loss = 0.0002, rewards = [0.00149531 0.01567651 0.09158034 0.12717082 0.13346224], learning_rate = 0.000056, (1112.0 examples/sec; 2.698 sec/batch)
+INFO:tensorflow:2019-08-31 19:00:39.950706: step 71300, loss = 1.2104, mono_loss = 1.5744, mono_g_loss = 0.0168, rewards = [0.02819232 0.         0.         0.         0.        ], learning_rate = 0.000056, (608.7 examples/sec; 4.929 sec/batch)
+INFO:tensorflow:2019-08-31 19:17:23.975341: step 71400, loss = 0.9677, mono_loss = 1.4602, mono_g_loss = 0.0021, rewards = [0.        0.0321777 0.        0.020455  0.0085283], learning_rate = 0.000056, (550.5 examples/sec; 5.449 sec/batch)
+INFO:tensorflow:2019-08-31 19:33:57.495547: step 71500, loss = 1.1671, mono_loss = 1.2481, mono_g_loss = 0.0010, rewards = [0.         0.         0.         0.         0.01588383], learning_rate = 0.000056, (1098.7 examples/sec; 2.730 sec/batch)
+INFO:tensorflow:2019-08-31 19:51:02.630861: step 71600, loss = 1.3611, mono_loss = 1.7627, mono_g_loss = 0.0042, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000056, (388.0 examples/sec; 7.733 sec/batch)
+INFO:tensorflow:2019-08-31 20:08:04.203649: step 71700, loss = 0.5812, mono_loss = 1.2759, mono_g_loss = 0.0207, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000056, (653.3 examples/sec; 4.592 sec/batch)
+INFO:tensorflow:2019-08-31 20:24:29.730847: step 71800, loss = 1.2601, mono_loss = 1.3777, mono_g_loss = 0.0096, rewards = [0.         0.         0.         0.06005805 0.        ], learning_rate = 0.000056, (645.1 examples/sec; 4.650 sec/batch)
+INFO:tensorflow:2019-08-31 20:40:53.992440: step 71900, loss = 0.9804, mono_loss = 1.3646, mono_g_loss = 0.0105, rewards = [0.         0.09449521 0.0074641  0.         0.        ], learning_rate = 0.000056, (627.8 examples/sec; 4.779 sec/batch)
+INFO:tensorflow:2019-08-31 20:57:26.878648: step 72000, loss = 1.2186, mono_loss = 1.5073, mono_g_loss = 0.0216, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000056, (419.1 examples/sec; 7.158 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...72000 -----------------
+INFO:tensorflow:Validation step ...72000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21681, step_loss: 2.4675
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.22715, step_loss: 2.3295
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.21848, step_loss: 2.3246
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20044, step_loss: 2.4377
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.20091, step_loss: 2.3010
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19395, step_loss: 2.5224
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.35187, step_loss: 1.1832
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.26442, step_loss: 1.8842
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.29199, step_loss: 1.7332
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.25527, step_loss: 1.9459
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.18032, step_loss: 2.4440
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.19728, step_loss: 1.9885
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.18948, step_loss: 2.3333
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.19400, step_loss: 2.3408
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.22416, step_loss: 2.1952
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.22431, step_loss: 1.9737
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.26341, step_loss: 1.9737
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.25429, step_loss: 1.9241
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.23897, step_loss: 2.1011
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.21227, step_loss: 2.2514
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21287, step_loss: 2.3020
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.12367, step_loss: 2.7600
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.22990, step_loss: 2.2569
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19976, step_loss: 2.4656
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.19449, step_loss: 2.6244
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.15183, step_loss: 2.8808
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.19347, step_loss: 2.4675
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.13297, step_loss: 2.8006
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.20225, step_loss: 2.5110
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.29571, step_loss: 2.1594
+INFO:tensorflow:prediction:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ fo@@ me 'ye giden cılar çarp@@ giden eden me@@ tro@@ bus l , saat 00 'ü 00 saat alarında zincir@@ lik@@ uyu otobüs u yol yol kenar@@ geçen üzere yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-31 20:57:49.723114, Step: 72000, Valid loss: 2.246832, Valid bleu : 0.219060
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-08-31 21:14:30.591874: step 72100, loss = 1.0302, mono_loss = 1.3949, mono_g_loss = 0.0145, rewards = [0.         0.         0.         0.         0.00812686], learning_rate = 0.000055, (561.9 examples/sec; 5.339 sec/batch)
+INFO:tensorflow:2019-08-31 21:31:23.084390: step 72200, loss = 1.1920, mono_loss = 0.7082, mono_g_loss = 0.0002, rewards = [0.         0.         0.06214835 0.         0.        ], learning_rate = 0.000055, (992.1 examples/sec; 3.024 sec/batch)
+INFO:tensorflow:2019-08-31 21:48:10.651109: step 72300, loss = 1.1861, mono_loss = 1.5042, mono_g_loss = 0.0004, rewards = [0.02813289 0.         0.05700361 0.00322592 0.        ], learning_rate = 0.000055, (741.2 examples/sec; 4.047 sec/batch)
+INFO:tensorflow:2019-08-31 22:05:15.761573: step 72400, loss = 1.1358, mono_loss = 1.5581, mono_g_loss = 0.0346, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (581.9 examples/sec; 5.156 sec/batch)
+INFO:tensorflow:2019-08-31 22:22:52.983186: step 72500, loss = 1.1853, mono_loss = 1.6577, mono_g_loss = 0.0169, rewards = [0.01743641 0.         0.         0.         0.00364394], learning_rate = 0.000055, (436.9 examples/sec; 6.866 sec/batch)
+INFO:tensorflow:2019-08-31 22:39:47.314545: step 72600, loss = 0.5798, mono_loss = 1.3597, mono_g_loss = 0.0087, rewards = [0.         0.         0.01514393 0.         0.        ], learning_rate = 0.000055, (604.6 examples/sec; 4.962 sec/batch)
+INFO:tensorflow:2019-08-31 22:56:11.005328: step 72700, loss = 1.2270, mono_loss = 0.9916, mono_g_loss = 0.0001, rewards = [0.01774525 0.         0.00169684 0.03225148 0.        ], learning_rate = 0.000055, (1200.2 examples/sec; 2.500 sec/batch)
+INFO:tensorflow:2019-08-31 23:13:15.141847: step 72800, loss = 1.1610, mono_loss = 1.1856, mono_g_loss = 0.0065, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (648.9 examples/sec; 4.623 sec/batch)
+INFO:tensorflow:2019-08-31 23:30:24.466630: step 72900, loss = 1.1055, mono_loss = 1.5330, mono_g_loss = 0.0091, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (586.8 examples/sec; 5.112 sec/batch)
+INFO:tensorflow:2019-08-31 23:47:07.214366: step 73000, loss = 1.3626, mono_loss = 1.5009, mono_g_loss = 0.0000, rewards = [0.         0.         0.         0.         0.00744591], learning_rate = 0.000055, (746.9 examples/sec; 4.017 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...73000 -----------------
+INFO:tensorflow:Validation step ...73000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21564, step_loss: 2.4915
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.22178, step_loss: 2.2953
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22703, step_loss: 2.3101
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20446, step_loss: 2.3960
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.20865, step_loss: 2.2677
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19248, step_loss: 2.5704
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.31279, step_loss: 1.2135
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.22102, step_loss: 1.8609
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.30677, step_loss: 1.7074
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.25012, step_loss: 2.0719
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.16955, step_loss: 2.3800
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.24683, step_loss: 1.9570
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.18732, step_loss: 2.3531
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.18952, step_loss: 2.4460
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.20051, step_loss: 2.1594
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.23205, step_loss: 1.9673
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.28293, step_loss: 1.9857
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.26438, step_loss: 1.9393
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.22415, step_loss: 2.0957
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.22184, step_loss: 2.2006
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21997, step_loss: 2.2683
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.12928, step_loss: 2.7348
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.22631, step_loss: 2.2368
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.18944, step_loss: 2.4482
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.18187, step_loss: 2.5953
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.14971, step_loss: 2.8702
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.19037, step_loss: 2.4825
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.15171, step_loss: 2.8615
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.20169, step_loss: 2.4857
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.22040, step_loss: 2.0367
+INFO:tensorflow:prediction:
+<2en> av@@ ğ@@ ü@@ t@@ lu@@ fo@@ me giden yaklaşık cılar 'ya gitmek etmesi me@@ tro@@ bus s , yaklaşık 00 'ü 00 sır@@ alarında zincir@@ lik@@ uyu otobüs u yol yoldan kenar@@ geçen üzere yav@@ uz@@ can dul@@ gun 'u çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-08-31 23:47:31.548258, Step: 73000, Valid loss: 2.237594, Valid bleu : 0.219007
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-09-01 00:04:41.342376: step 73100, loss = 1.1219, mono_loss = 1.0077, mono_g_loss = 0.0036, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (841.7 examples/sec; 3.564 sec/batch)
+INFO:tensorflow:2019-09-01 00:21:38.655139: step 73200, loss = 1.2161, mono_loss = 1.5632, mono_g_loss = 0.0146, rewards = [0.         0.         0.         0.00529581 0.        ], learning_rate = 0.000055, (635.5 examples/sec; 4.721 sec/batch)
+INFO:tensorflow:2019-09-01 00:38:36.799721: step 73300, loss = 1.1554, mono_loss = 0.6762, mono_g_loss = 0.0006, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (860.9 examples/sec; 3.485 sec/batch)
+INFO:tensorflow:2019-09-01 00:55:56.009848: step 73400, loss = 1.0961, mono_loss = 1.0649, mono_g_loss = 0.0099, rewards = [0.         0.         0.05372579 0.         0.        ], learning_rate = 0.000055, (716.1 examples/sec; 4.190 sec/batch)
+INFO:tensorflow:2019-09-01 01:12:41.549890: step 73500, loss = 1.2642, mono_loss = 1.2831, mono_g_loss = 0.0093, rewards = [0.         0.         0.02958407 0.00336504 0.        ], learning_rate = 0.000055, (795.2 examples/sec; 3.773 sec/batch)
+INFO:tensorflow:2019-09-01 01:28:46.886285: step 73600, loss = 1.2890, mono_loss = 1.1849, mono_g_loss = 0.0159, rewards = [0.         0.         0.         0.00892881 0.03618603], learning_rate = 0.000055, (890.8 examples/sec; 3.368 sec/batch)
+INFO:tensorflow:2019-09-01 01:45:27.208068: step 73700, loss = 0.5396, mono_loss = 1.8036, mono_g_loss = 0.0007, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (417.3 examples/sec; 7.189 sec/batch)
+INFO:tensorflow:2019-09-01 02:01:42.879149: step 73800, loss = 1.2585, mono_loss = 1.8157, mono_g_loss = 0.0021, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (570.1 examples/sec; 5.263 sec/batch)
+INFO:tensorflow:2019-09-01 02:18:20.038782: step 73900, loss = 1.0686, mono_loss = 1.6180, mono_g_loss = 0.0047, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (432.7 examples/sec; 6.934 sec/batch)
+INFO:tensorflow:2019-09-01 02:35:52.380525: step 74000, loss = 1.1497, mono_loss = 1.5684, mono_g_loss = 0.0088, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (534.5 examples/sec; 5.613 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...74000 -----------------
+INFO:tensorflow:Validation step ...74000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21704, step_loss: 2.5061
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.21653, step_loss: 2.3321
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22783, step_loss: 2.3402
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20671, step_loss: 2.3920
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.21944, step_loss: 2.2836
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19405, step_loss: 2.5451
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.33552, step_loss: 1.2036
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.23280, step_loss: 1.9209
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.26756, step_loss: 1.7260
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.22228, step_loss: 1.9626
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.15470, step_loss: 2.4192
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.20158, step_loss: 1.9414
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.20078, step_loss: 2.3598
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.16974, step_loss: 2.4485
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.19853, step_loss: 2.1748
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.24282, step_loss: 2.0173
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.26876, step_loss: 2.0050
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.26891, step_loss: 1.8881
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.25630, step_loss: 2.0971
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.23053, step_loss: 2.2475
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.22382, step_loss: 2.2630
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.14020, step_loss: 2.6398
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.23797, step_loss: 2.2118
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.18710, step_loss: 2.4470
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.18726, step_loss: 2.6341
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.14993, step_loss: 2.8897
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18427, step_loss: 2.4835
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.12250, step_loss: 2.8371
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.20237, step_loss: 2.5075
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.23534, step_loss: 2.0811
+INFO:tensorflow:prediction:
+<2en> yaklaşık ğ@@ ü@@ t@@ lü@@ fo@@ me 'ye , cılar 'a gitmek eden bir tro@@ bus s , gece 00 0@@ 30 sır@@ larındaki zincir@@ lik@@ uyu otobüs uş yol yol kenar@@ geç@@ isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-09-01 02:36:13.442916, Step: 74000, Valid loss: 2.244894, Valid bleu : 0.218426
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-09-01 02:53:17.643792: step 74100, loss = 0.9537, mono_loss = 1.4685, mono_g_loss = 0.0188, rewards = [0.         0.         0.         0.         0.12627843], learning_rate = 0.000055, (510.0 examples/sec; 5.882 sec/batch)
+INFO:tensorflow:2019-09-01 03:10:30.014035: step 74200, loss = 0.9984, mono_loss = 1.4929, mono_g_loss = 0.0019, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (458.3 examples/sec; 6.546 sec/batch)
+INFO:tensorflow:2019-09-01 03:27:31.729186: step 74300, loss = 1.2194, mono_loss = 1.2828, mono_g_loss = 0.0007, rewards = [0.04419553 0.01707608 0.22687797 0.         0.0134563 ], learning_rate = 0.000055, (923.0 examples/sec; 3.250 sec/batch)
+INFO:tensorflow:2019-09-01 03:44:54.386247: step 74400, loss = 1.1616, mono_loss = 1.9123, mono_g_loss = 0.0003, rewards = [0.         0.07584387 0.         0.         0.01478082], learning_rate = 0.000055, (708.5 examples/sec; 4.235 sec/batch)
+INFO:tensorflow:2019-09-01 04:02:00.965632: step 74500, loss = 1.2739, mono_loss = 1.3252, mono_g_loss = 0.0093, rewards = [0.         0.00292922 0.         0.         0.        ], learning_rate = 0.000055, (597.4 examples/sec; 5.022 sec/batch)
+INFO:tensorflow:2019-09-01 04:19:09.412887: step 74600, loss = 0.9592, mono_loss = 1.2271, mono_g_loss = 0.0010, rewards = [0.02996238 0.00574707 0.01603762 0.         0.09978825], learning_rate = 0.000055, (1011.0 examples/sec; 2.967 sec/batch)
+INFO:tensorflow:2019-09-01 04:36:45.794293: step 74700, loss = 1.1637, mono_loss = 1.2271, mono_g_loss = 0.0013, rewards = [0.         0.         0.08646838 0.         0.        ], learning_rate = 0.000055, (673.7 examples/sec; 4.453 sec/batch)
+INFO:tensorflow:2019-09-01 04:53:46.308780: step 74800, loss = 1.0975, mono_loss = 1.6603, mono_g_loss = 0.0000, rewards = [0.09501284 0.         0.         0.01357059 0.        ], learning_rate = 0.000055, (483.2 examples/sec; 6.209 sec/batch)
+INFO:tensorflow:2019-09-01 05:10:09.289864: step 74900, loss = 1.0278, mono_loss = 0.8074, mono_g_loss = 0.0021, rewards = [0.08258864 0.         0.         0.         0.01658262], learning_rate = 0.000055, (1080.3 examples/sec; 2.777 sec/batch)
+INFO:tensorflow:2019-09-01 05:27:06.854504: step 75000, loss = 1.2343, mono_loss = 1.3545, mono_g_loss = 0.0073, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (586.2 examples/sec; 5.118 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...75000 -----------------
+INFO:tensorflow:Validation step ...75000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.22235, step_loss: 2.4814
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.22668, step_loss: 2.3360
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.23286, step_loss: 2.2911
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20933, step_loss: 2.4232
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.20886, step_loss: 2.2824
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.18810, step_loss: 2.5846
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.28849, step_loss: 1.1817
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.21778, step_loss: 1.9167
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.29381, step_loss: 1.6741
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.21951, step_loss: 1.9891
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.17132, step_loss: 2.3996
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.20262, step_loss: 2.0101
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.19611, step_loss: 2.3319
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.21230, step_loss: 2.3893
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.21045, step_loss: 2.1769
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.23446, step_loss: 2.0014
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.29510, step_loss: 1.9708
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.27441, step_loss: 1.8986
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.23131, step_loss: 2.0921
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.22295, step_loss: 2.2165
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.20935, step_loss: 2.2703
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.13143, step_loss: 2.5524
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.24077, step_loss: 2.2095
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19732, step_loss: 2.4533
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.20352, step_loss: 2.6309
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.14299, step_loss: 2.8858
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.19004, step_loss: 2.4900
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.14071, step_loss: 2.8480
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.20698, step_loss: 2.5404
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.26808, step_loss: 2.3392
+INFO:tensorflow:prediction:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ s@@ in 'den yola cılar 'ya giden eden bir tro@@ bus s , sabah 00 'ün 00 saat alarında zincir@@ lik@@ uyu otobüs dur@@ bir yol yakınlarında çıkan için yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-09-01 05:27:28.816815, Step: 75000, Valid loss: 2.239064, Valid bleu : 0.220288
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-09-01 05:45:07.353063: step 75100, loss = 0.9392, mono_loss = 1.5791, mono_g_loss = 0.0131, rewards = [0.        0.        0.        0.0096406 0.       ], learning_rate = 0.000055, (448.5 examples/sec; 6.688 sec/batch)
+INFO:tensorflow:2019-09-01 06:02:25.096861: step 75200, loss = 1.2118, mono_loss = 1.6622, mono_g_loss = 0.0041, rewards = [0.         0.03394377 0.         0.         0.        ], learning_rate = 0.000055, (444.6 examples/sec; 6.748 sec/batch)
+INFO:tensorflow:2019-09-01 06:19:19.193246: step 75300, loss = 1.0718, mono_loss = 1.6489, mono_g_loss = 0.0027, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (400.4 examples/sec; 7.493 sec/batch)
+INFO:tensorflow:2019-09-01 06:36:32.557238: step 75400, loss = 0.9152, mono_loss = 1.7050, mono_g_loss = 0.0204, rewards = [0.         0.         0.         0.01814363 0.03043361], learning_rate = 0.000055, (516.1 examples/sec; 5.812 sec/batch)
+INFO:tensorflow:2019-09-01 06:53:51.271646: step 75500, loss = 1.2147, mono_loss = 1.4125, mono_g_loss = 0.0161, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000055, (678.3 examples/sec; 4.423 sec/batch)
+INFO:tensorflow:2019-09-01 07:10:53.254329: step 75600, loss = 0.9305, mono_loss = 1.4898, mono_g_loss = 0.0213, rewards = [0.00424166 0.02350663 0.         0.         0.        ], learning_rate = 0.000055, (627.5 examples/sec; 4.781 sec/batch)
+INFO:tensorflow:2019-09-01 07:27:29.932475: step 75700, loss = 1.1291, mono_loss = 1.3098, mono_g_loss = 0.0000, rewards = [0.         0.         0.         0.         0.03994471], learning_rate = 0.000055, (743.0 examples/sec; 4.037 sec/batch)
+INFO:tensorflow:2019-09-01 07:44:19.731305: step 75800, loss = 1.0733, mono_loss = 1.3614, mono_g_loss = 0.0000, rewards = [0.         0.         0.         0.02331587 0.        ], learning_rate = 0.000055, (896.6 examples/sec; 3.346 sec/batch)
+INFO:tensorflow:2019-09-01 08:01:31.816876: step 75900, loss = 1.2948, mono_loss = 1.2843, mono_g_loss = 0.0000, rewards = [0.         0.         0.08570658 0.11484624 0.01665268], learning_rate = 0.000055, (743.0 examples/sec; 4.037 sec/batch)
+INFO:tensorflow:2019-09-01 08:18:44.367435: step 76000, loss = 1.0750, mono_loss = 1.3500, mono_g_loss = 0.0123, rewards = [0.         0.03372218 0.         0.         0.06056795], learning_rate = 0.000054, (549.8 examples/sec; 5.457 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...76000 -----------------
+INFO:tensorflow:Validation step ...76000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21451, step_loss: 2.4758
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.23896, step_loss: 2.2932
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.23127, step_loss: 2.3047
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20475, step_loss: 2.3909
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.21055, step_loss: 2.2833
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.20097, step_loss: 2.5288
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.26158, step_loss: 1.1565
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.17936, step_loss: 1.9364
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.30091, step_loss: 1.6705
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.24836, step_loss: 2.0402
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.17768, step_loss: 2.3656
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.23991, step_loss: 1.9270
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.19139, step_loss: 2.3787
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.19212, step_loss: 2.4318
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.20972, step_loss: 2.1802
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.23527, step_loss: 2.0145
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.28206, step_loss: 2.0092
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.26338, step_loss: 1.8954
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.25727, step_loss: 2.0652
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.21931, step_loss: 2.2303
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21899, step_loss: 2.2899
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.14300, step_loss: 2.6918
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.23469, step_loss: 2.2409
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19602, step_loss: 2.4451
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.19340, step_loss: 2.6317
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.17026, step_loss: 2.8848
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18114, step_loss: 2.4581
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.15084, step_loss: 2.8606
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.19078, step_loss: 2.5542
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.21694, step_loss: 2.3245
+INFO:tensorflow:prediction:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ fo@@ me giden yola cılar 'ya doğru etmek bir tro@@ bus s , gece 00 'de 00 sır@@ alarında zincir@@ lik@@ uyu otobüs mak otobü@@ geçen yolun geç@@ için yav@@ uz@@ can dul@@ gun 'u doğru tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-09-01 08:19:03.887427, Step: 76000, Valid loss: 2.238146, Valid bleu : 0.219990
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-09-01 08:36:38.446333: step 76100, loss = 1.2054, mono_loss = 1.5072, mono_g_loss = 0.0000, rewards = [0.         0.         0.         0.12563035 0.        ], learning_rate = 0.000054, (717.2 examples/sec; 4.183 sec/batch)
+INFO:tensorflow:2019-09-01 08:53:46.481569: step 76200, loss = 1.3903, mono_loss = 1.8933, mono_g_loss = 0.0245, rewards = [0.07851157 0.         0.00094979 0.05327948 0.11919172], learning_rate = 0.000054, (517.6 examples/sec; 5.795 sec/batch)
+INFO:tensorflow:2019-09-01 09:10:41.378164: step 76300, loss = 1.0046, mono_loss = 1.4347, mono_g_loss = 0.0068, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (548.4 examples/sec; 5.470 sec/batch)
+INFO:tensorflow:2019-09-01 09:27:25.889271: step 76400, loss = 1.2720, mono_loss = 1.6962, mono_g_loss = 0.0207, rewards = [0.01567261 0.01366898 0.         0.         0.        ], learning_rate = 0.000054, (532.7 examples/sec; 5.631 sec/batch)
+INFO:tensorflow:2019-09-01 09:44:34.635272: step 76500, loss = 0.5288, mono_loss = 1.3581, mono_g_loss = 0.0073, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (592.9 examples/sec; 5.060 sec/batch)
+INFO:tensorflow:2019-09-01 10:01:20.898549: step 76600, loss = 1.1053, mono_loss = 1.4964, mono_g_loss = 0.0021, rewards = [0.         0.         0.         0.09591958 0.00259591], learning_rate = 0.000054, (714.2 examples/sec; 4.200 sec/batch)
+INFO:tensorflow:2019-09-01 10:17:33.182852: step 76700, loss = 1.2900, mono_loss = 1.3828, mono_g_loss = 0.0134, rewards = [0.         0.         0.05324155 0.         0.        ], learning_rate = 0.000054, (579.5 examples/sec; 5.177 sec/batch)
+INFO:tensorflow:2019-09-01 10:34:21.225795: step 76800, loss = 1.0420, mono_loss = 1.5933, mono_g_loss = 0.0107, rewards = [0.01046033 0.         0.02953187 0.         0.        ], learning_rate = 0.000054, (541.4 examples/sec; 5.541 sec/batch)
+INFO:tensorflow:2019-09-01 10:51:21.876572: step 76900, loss = 1.3576, mono_loss = 1.2017, mono_g_loss = 0.0000, rewards = [0.         0.00997946 0.0362334  0.0186931  0.        ], learning_rate = 0.000054, (783.6 examples/sec; 3.829 sec/batch)
+INFO:tensorflow:2019-09-01 11:08:05.192893: step 77000, loss = 0.9615, mono_loss = 1.0725, mono_g_loss = 0.0056, rewards = [0.         0.         0.         0.04860363 0.        ], learning_rate = 0.000054, (1078.1 examples/sec; 2.783 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...77000 -----------------
+INFO:tensorflow:Validation step ...77000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.22637, step_loss: 2.4803
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.21729, step_loss: 2.3239
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22836, step_loss: 2.2700
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.21521, step_loss: 2.4027
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.21612, step_loss: 2.2751
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19748, step_loss: 2.5102
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.26217, step_loss: 1.2308
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.24058, step_loss: 1.9487
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.23363, step_loss: 1.6732
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.25207, step_loss: 2.0135
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.18276, step_loss: 2.3987
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.20017, step_loss: 1.9926
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.19895, step_loss: 2.3424
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.18223, step_loss: 2.4467
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.20986, step_loss: 2.1796
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.24772, step_loss: 2.0035
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.28738, step_loss: 2.0293
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.28797, step_loss: 1.9274
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.23304, step_loss: 2.1400
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.21738, step_loss: 2.2395
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.22619, step_loss: 2.2640
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.14532, step_loss: 2.5492
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.23118, step_loss: 2.2471
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.20023, step_loss: 2.4283
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.18320, step_loss: 2.5687
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.15238, step_loss: 2.8985
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.19170, step_loss: 2.4737
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.13067, step_loss: 2.9164
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.19691, step_loss: 2.5333
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.25364, step_loss: 2.2307
+INFO:tensorflow:prediction:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'yi ayrılan cılar çarp@@ doğru eden bir tro@@ bus n , zincir@@ 00 00 00 sır@@ alarında zincir@@ lik@@ uyu otobüs u yol meydana yakınında geçen için yav@@ uz@@ can dul@@ gun 'a doğru tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-09-01 11:08:28.796474, Step: 77000, Valid loss: 2.243761, Valid bleu : 0.219362
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-09-01 11:25:14.836086: step 77100, loss = 1.3413, mono_loss = 1.1934, mono_g_loss = 0.0084, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (811.1 examples/sec; 3.699 sec/batch)
+INFO:tensorflow:2019-09-01 11:42:20.543563: step 77200, loss = 1.1696, mono_loss = 1.4236, mono_g_loss = 0.0118, rewards = [0.         0.         0.         0.         0.03074545], learning_rate = 0.000054, (605.4 examples/sec; 4.955 sec/batch)
+INFO:tensorflow:2019-09-01 11:59:13.196039: step 77300, loss = 1.1189, mono_loss = 0.9298, mono_g_loss = 0.0075, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (750.9 examples/sec; 3.995 sec/batch)
+INFO:tensorflow:2019-09-01 12:16:04.297552: step 77400, loss = 1.1395, mono_loss = 1.4132, mono_g_loss = 0.0000, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (628.7 examples/sec; 4.771 sec/batch)
+INFO:tensorflow:2019-09-01 12:32:52.359105: step 77500, loss = 1.2592, mono_loss = 1.3772, mono_g_loss = 0.0121, rewards = [0.         0.         0.         0.03425065 0.        ], learning_rate = 0.000054, (575.0 examples/sec; 5.217 sec/batch)
+INFO:tensorflow:2019-09-01 12:49:46.337732: step 77600, loss = 0.9819, mono_loss = 1.1947, mono_g_loss = 0.0067, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (846.2 examples/sec; 3.545 sec/batch)
+INFO:tensorflow:2019-09-01 13:06:54.746570: step 77700, loss = 1.0759, mono_loss = 1.7856, mono_g_loss = 0.0030, rewards = [0.10532105 0.20652865 0.         0.         0.02045755], learning_rate = 0.000054, (479.4 examples/sec; 6.257 sec/batch)
+INFO:tensorflow:2019-09-01 13:24:00.913630: step 77800, loss = 1.2863, mono_loss = 1.6522, mono_g_loss = 0.0153, rewards = [0.         0.         0.07228387 0.         0.03451948], learning_rate = 0.000054, (472.3 examples/sec; 6.351 sec/batch)
+INFO:tensorflow:2019-09-01 13:40:50.302474: step 77900, loss = 1.2818, mono_loss = 1.3249, mono_g_loss = 0.0017, rewards = [0.03502679 0.02306378 0.00287481 0.01448445 0.00765812], learning_rate = 0.000054, (611.6 examples/sec; 4.905 sec/batch)
+INFO:tensorflow:2019-09-01 13:57:54.817633: step 78000, loss = 1.0916, mono_loss = 1.5257, mono_g_loss = 0.0041, rewards = [0.02274142 0.         0.         0.         0.        ], learning_rate = 0.000054, (606.2 examples/sec; 4.949 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...78000 -----------------
+INFO:tensorflow:Validation step ...78000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21632, step_loss: 2.4708
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.22683, step_loss: 2.2976
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.22340, step_loss: 2.3077
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.19935, step_loss: 2.4145
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.20743, step_loss: 2.2756
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19392, step_loss: 2.5442
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.30688, step_loss: 1.1688
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.24799, step_loss: 1.9024
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.27648, step_loss: 1.7078
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.31725, step_loss: 1.9643
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.18655, step_loss: 2.4146
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.21811, step_loss: 1.9676
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.20118, step_loss: 2.4133
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.18772, step_loss: 2.4088
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.21145, step_loss: 2.1840
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.22097, step_loss: 2.0380
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.30084, step_loss: 1.9562
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.27439, step_loss: 1.8942
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.24312, step_loss: 2.1274
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.23473, step_loss: 2.2228
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21514, step_loss: 2.2871
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.13988, step_loss: 2.6679
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.24065, step_loss: 2.2168
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.18796, step_loss: 2.4735
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.18936, step_loss: 2.6317
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.16020, step_loss: 2.7951
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18696, step_loss: 2.4721
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.14549, step_loss: 2.8464
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.19514, step_loss: 2.5114
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.23650, step_loss: 2.1559
+INFO:tensorflow:prediction:
+<2en> zincir@@ ğ@@ ü@@ t@@ lü@@ fo@@ me 'yi yola cılar 'a doğru edecek bir tro@@ bü@@ s , zincir@@ 20.@@ : 00 sır@@ alarında zincir@@ lik@@ uyu otobü@@ dur@@ yol yol kenar@@ geçen için yav@@ uz@@ can dul@@ gun 'a doğru tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-09-01 13:58:16.604418, Step: 78000, Valid loss: 2.241128, Valid bleu : 0.222587
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:Saving model at /home/work/xiepan/xp_dial/gan_nmt/transformer_rl_sess/model_save/en-tr/share/base/train_mono_gan/model.ckpt-78000
+INFO:tensorflow:2019-09-01 14:15:42.847506: step 78100, loss = 1.1948, mono_loss = 1.5834, mono_g_loss = 0.0147, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (592.4 examples/sec; 5.064 sec/batch)
+INFO:tensorflow:2019-09-01 14:32:23.375876: step 78200, loss = 1.1341, mono_loss = 1.4248, mono_g_loss = 0.0000, rewards = [0.02212326 0.         0.05370353 0.01679074 0.09610147], learning_rate = 0.000054, (805.2 examples/sec; 3.726 sec/batch)
+INFO:tensorflow:2019-09-01 14:49:28.785872: step 78300, loss = 1.1909, mono_loss = 1.4081, mono_g_loss = 0.0132, rewards = [0.         0.         0.         0.         0.01534937], learning_rate = 0.000054, (680.1 examples/sec; 4.411 sec/batch)
+INFO:tensorflow:2019-09-01 15:06:36.237047: step 78400, loss = 1.0918, mono_loss = 1.4343, mono_g_loss = 0.0000, rewards = [0.         0.04720546 0.         0.0254394  0.06742405], learning_rate = 0.000054, (846.5 examples/sec; 3.544 sec/batch)
+INFO:tensorflow:2019-09-01 15:23:08.436394: step 78500, loss = 1.0819, mono_loss = 1.3346, mono_g_loss = 0.0061, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (617.9 examples/sec; 4.855 sec/batch)
+INFO:tensorflow:2019-09-01 15:40:09.234930: step 78600, loss = 1.2334, mono_loss = 1.6913, mono_g_loss = 0.0327, rewards = [0.03243206 0.         0.01039743 0.05046076 0.06658477], learning_rate = 0.000054, (578.0 examples/sec; 5.190 sec/batch)
+INFO:tensorflow:2019-09-01 15:57:03.735985: step 78700, loss = 0.9290, mono_loss = 1.3280, mono_g_loss = 0.0058, rewards = [0.         0.06985836 0.         0.         0.        ], learning_rate = 0.000054, (607.6 examples/sec; 4.938 sec/batch)
+INFO:tensorflow:2019-09-01 16:14:34.545843: step 78800, loss = 1.2388, mono_loss = 1.7045, mono_g_loss = 0.0083, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (633.9 examples/sec; 4.732 sec/batch)
+INFO:tensorflow:2019-09-01 16:31:36.665569: step 78900, loss = 1.2117, mono_loss = 1.3875, mono_g_loss = 0.0005, rewards = [0.         0.         0.         0.00857519 0.        ], learning_rate = 0.000054, (588.8 examples/sec; 5.095 sec/batch)
+INFO:tensorflow:2019-09-01 16:48:55.401173: step 79000, loss = 1.1687, mono_loss = 1.6338, mono_g_loss = 0.0113, rewards = [0.07770208 0.00600797 0.01836446 0.         0.10028658], learning_rate = 0.000054, (574.2 examples/sec; 5.224 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...79000 -----------------
+INFO:tensorflow:Validation step ...79000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21663, step_loss: 2.4936
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.21953, step_loss: 2.3313
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.23300, step_loss: 2.3093
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.20531, step_loss: 2.3911
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.19498, step_loss: 2.2712
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19507, step_loss: 2.5333
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.27748, step_loss: 1.2047
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.20684, step_loss: 1.8994
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.27614, step_loss: 1.6656
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.24584, step_loss: 2.0384
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.20140, step_loss: 2.3857
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.19235, step_loss: 2.0038
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.19677, step_loss: 2.3796
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.21278, step_loss: 2.3777
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.21129, step_loss: 2.1865
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.21269, step_loss: 2.0092
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.27862, step_loss: 2.0042
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.26049, step_loss: 1.9211
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.25047, step_loss: 2.1184
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.22086, step_loss: 2.2431
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21901, step_loss: 2.2691
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.13628, step_loss: 2.6804
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.22672, step_loss: 2.2254
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19504, step_loss: 2.4557
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.19124, step_loss: 2.6162
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.15594, step_loss: 2.8128
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18938, step_loss: 2.4629
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.13546, step_loss: 2.8622
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.19813, step_loss: 2.4976
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.32181, step_loss: 1.9271
+INFO:tensorflow:prediction:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'yi yola cılar 'ya giden edecek bir tro@@ bü@@ s@@ , yaklaşık 00 : 30 saat alarında zincir@@ lik@@ uyu otobü@@ u yol yol aş@@ geçen olan yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-09-01 16:49:18.925704, Step: 79000, Valid loss: 2.241446, Valid bleu : 0.217425
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-09-01 17:06:17.921150: step 79100, loss = 0.6275, mono_loss = 1.8472, mono_g_loss = 0.0000, rewards = [0.         0.         0.07576601 0.         0.01843356], learning_rate = 0.000054, (481.1 examples/sec; 6.236 sec/batch)
+INFO:tensorflow:2019-09-01 17:23:34.803476: step 79200, loss = 1.0720, mono_loss = 1.4609, mono_g_loss = 0.0003, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (408.4 examples/sec; 7.345 sec/batch)
+INFO:tensorflow:2019-09-01 17:40:26.646035: step 79300, loss = 1.1995, mono_loss = 1.3942, mono_g_loss = 0.0001, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000054, (489.1 examples/sec; 6.134 sec/batch)
+INFO:tensorflow:2019-09-01 17:57:28.048620: step 79400, loss = 0.6040, mono_loss = 1.5674, mono_g_loss = 0.0060, rewards = [0.04184907 0.01404849 0.         0.         0.01416653], learning_rate = 0.000054, (630.6 examples/sec; 4.757 sec/batch)
+INFO:tensorflow:2019-09-01 18:14:54.003107: step 79500, loss = 1.1300, mono_loss = 1.5093, mono_g_loss = 0.0200, rewards = [0.         0.00699692 0.         0.         0.        ], learning_rate = 0.000054, (554.7 examples/sec; 5.409 sec/batch)
+INFO:tensorflow:2019-09-01 18:31:52.786575: step 79600, loss = 1.2498, mono_loss = 1.4935, mono_g_loss = 0.0000, rewards = [0.04917839 0.         0.         0.         0.        ], learning_rate = 0.000054, (542.2 examples/sec; 5.533 sec/batch)
+INFO:tensorflow:2019-09-01 18:49:09.355815: step 79700, loss = 1.1128, mono_loss = 1.0129, mono_g_loss = 0.0016, rewards = [0.0145773  0.         0.01344125 0.0347789  0.0256962 ], learning_rate = 0.000054, (1003.0 examples/sec; 2.991 sec/batch)
+INFO:tensorflow:2019-09-01 19:04:56.797203: step 79800, loss = 1.0404, mono_loss = 0.9570, mono_g_loss = 0.0088, rewards = [0.         0.03662479 0.         0.         0.        ], learning_rate = 0.000054, (947.6 examples/sec; 3.166 sec/batch)
+INFO:tensorflow:2019-09-01 19:22:01.133123: step 79900, loss = 1.1710, mono_loss = 1.6435, mono_g_loss = 0.0000, rewards = [0.         0.         0.         0.09686412 0.04978578], learning_rate = 0.000054, (678.9 examples/sec; 4.419 sec/batch)
+INFO:tensorflow:2019-09-01 19:39:35.365435: step 80000, loss = 1.1238, mono_loss = 1.5594, mono_g_loss = 0.0018, rewards = [0.         0.12125403 0.00047697 0.         0.        ], learning_rate = 0.000054, (468.9 examples/sec; 6.398 sec/batch)
+INFO:tensorflow:-------------------- Validation step ...80000 -----------------
+INFO:tensorflow:Validation step ...80000
+INFO:tensorflow:pairs shape (71, 41), (71, 41), step_bleu: 0.21319, step_loss: 2.4902
+INFO:tensorflow:pairs shape (65, 45), (65, 45), step_bleu: 0.21964, step_loss: 2.3273
+INFO:tensorflow:pairs shape (90, 32), (90, 32), step_bleu: 0.23487, step_loss: 2.3012
+INFO:tensorflow:pairs shape (83, 35), (83, 35), step_bleu: 0.21297, step_loss: 2.4130
+INFO:tensorflow:pairs shape (115, 25), (115, 25), step_bleu: 0.22450, step_loss: 2.2405
+INFO:tensorflow:pairs shape (58, 50), (58, 50), step_bleu: 0.19943, step_loss: 2.5053
+INFO:tensorflow:pairs shape (48, 7), (48, 7), step_bleu: 0.25665, step_loss: 1.1806
+INFO:tensorflow:pairs shape (42, 8), (42, 8), step_bleu: 0.25864, step_loss: 1.8737
+INFO:tensorflow:pairs shape (64, 9), (64, 9), step_bleu: 0.29264, step_loss: 1.6717
+INFO:tensorflow:pairs shape (32, 10), (32, 10), step_bleu: 0.21657, step_loss: 2.0245
+INFO:tensorflow:pairs shape (70, 11), (70, 11), step_bleu: 0.18014, step_loss: 2.4041
+INFO:tensorflow:pairs shape (44, 12), (44, 12), step_bleu: 0.24154, step_loss: 1.9715
+INFO:tensorflow:pairs shape (48, 13), (48, 13), step_bleu: 0.18487, step_loss: 2.3708
+INFO:tensorflow:pairs shape (42, 14), (42, 14), step_bleu: 0.19810, step_loss: 2.4513
+INFO:tensorflow:pairs shape (78, 15), (78, 15), step_bleu: 0.20254, step_loss: 2.2093
+INFO:tensorflow:pairs shape (54, 16), (54, 16), step_bleu: 0.22006, step_loss: 2.0308
+INFO:tensorflow:pairs shape (74, 17), (74, 17), step_bleu: 0.29205, step_loss: 1.9937
+INFO:tensorflow:pairs shape (70, 18), (70, 18), step_bleu: 0.27336, step_loss: 1.9398
+INFO:tensorflow:pairs shape (66, 19), (66, 19), step_bleu: 0.23216, step_loss: 2.1329
+INFO:tensorflow:pairs shape (108, 21), (108, 21), step_bleu: 0.22441, step_loss: 2.2412
+INFO:tensorflow:pairs shape (106, 23), (106, 23), step_bleu: 0.21488, step_loss: 2.2716
+INFO:tensorflow:pairs shape (9, 25), (9, 25), step_bleu: 0.16037, step_loss: 2.7289
+INFO:tensorflow:pairs shape (84, 27), (84, 27), step_bleu: 0.22753, step_loss: 2.2439
+INFO:tensorflow:pairs shape (92, 29), (92, 29), step_bleu: 0.19060, step_loss: 2.4517
+INFO:tensorflow:pairs shape (36, 32), (36, 32), step_bleu: 0.18840, step_loss: 2.6192
+INFO:tensorflow:pairs shape (17, 35), (17, 35), step_bleu: 0.15609, step_loss: 2.9190
+INFO:tensorflow:pairs shape (74, 38), (74, 38), step_bleu: 0.18464, step_loss: 2.4691
+INFO:tensorflow:pairs shape (41, 41), (41, 41), step_bleu: 0.15664, step_loss: 2.8715
+INFO:tensorflow:pairs shape (31, 45), (31, 45), step_bleu: 0.20094, step_loss: 2.5231
+INFO:tensorflow:pairs shape (2, 45), (2, 45), step_bleu: 0.26842, step_loss: 2.0291
+INFO:tensorflow:prediction:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'nin yola cılar çarp@@ gitmek edecek bir tro@@ bus s , aniden 00 .@@ 00 sır@@ alarında zincir@@ lik@@ uyu otobü@@ u yakın yol aş@@ geçen üzere yav@@ uz@@ can dul@@ gun çarp@@ çarp@@ tı . <EOS> 
+INFO:tensorflow:target:
+<2en> sö@@ ğ@@ ü@@ t@@ lü@@ çeş@@ me 'den av@@ cılar 'a hareket eden me@@ tro@@ bü@@ s , saat 00@@ .@@ 30 sır@@ alarında zincir@@ lik@@ uyu dur@@ ağında aniden yolun karşısına geçmek isteyen yav@@ uz@@ can dul@@ gun 'a çarp@@ tı . <EOS> 
+INFO:tensorflow:Finished going through the valid dataset
+INFO:tensorflow:2019-09-01 19:40:00.805591, Step: 80000, Valid loss: 2.244490, Valid bleu : 0.220522
+INFO:tensorflow:--------------------- Finish evaluation -------------------------------
+INFO:tensorflow:2019-09-01 19:56:53.816871: step 80100, loss = 1.1840, mono_loss = 1.3249, mono_g_loss = 0.0084, rewards = [0. 0. 0. 0. 0.], learning_rate = 0.000053, (735.1 examples/sec; 4.081 sec/batch)
+INFO:tensorflow:2019-09-01 20:14:11.320897: step 80200, loss = 0.9456, mono_loss = 0.9890, mono_g_loss = 0.0006, rewards = [0.         0.         0.09417696 0.         0.1206811 ], learning_rate = 0.000053, (1121.2 examples/sec; 2.676 sec/batch)
+run_mono_gan.sh: line 27: 215718 Killed                  python3 main_mono_gan.py --debug false --num_gpus 2 --roll_num 5 --param_set base --data_dir /home/work/xiepan/xp_dial/gan_nmt/transformer_rl/data/en-tr/v1/gen_data --data_dir_mono /home/work/xiepan/xp_dial/gan_nmt/transformer_rl/data/en-tr/v1_mono/gen_data --model_dir /home/work/xiepan/xp_dial/gan_nmt/transformer_rl_sess/model_save/en-tr/share/base/train_mono_gan --pretrain_dir /home/work/xiepan/xp_dial/gan_nmt/transformer_rl_sess/model_save/en-tr/share/base/train_mono --learning_rate 0.5 --learning_rate_bt 1.0 --batch_size 3000 --max_length 50 --fro src --to tgt --save_checkpoints_secs 20000 --shared_embedding_softmax_weights true --train_steps 250000 --steps_between_evals 1000
